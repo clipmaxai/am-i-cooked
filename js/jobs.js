@@ -1146,12 +1146,18 @@ function findJob(query) {
   match = JOBS_DATA.find(j => j.aliases && j.aliases.some(a => a === q));
   if (match) return match;
   
-  // Partial match on title
-  match = JOBS_DATA.find(j => j.title.includes(q) || q.includes(j.title));
+  // Partial match on title (both sides must be 4+ chars to avoid substring noise)
+  match = JOBS_DATA.find(j => {
+    if (j.title.length < 4 || q.length < 4) return false;
+    return j.title.includes(q) || q.includes(j.title);
+  });
   if (match) return match;
   
-  // Partial match on aliases
-  match = JOBS_DATA.find(j => j.aliases && j.aliases.some(a => a.includes(q) || q.includes(a)));
+  // Partial match on aliases (both sides must be 4+ chars)
+  match = JOBS_DATA.find(j => j.aliases && j.aliases.some(a => {
+    if (a.length < 4 || q.length < 4) return false;
+    return a.includes(q) || q.includes(a);
+  }));
   if (match) return match;
   
   // Word-level fuzzy: full words must match (min 3 chars to avoid false positives)
