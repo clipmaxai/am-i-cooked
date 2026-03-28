@@ -1154,15 +1154,17 @@ function findJob(query) {
   match = JOBS_DATA.find(j => j.aliases && j.aliases.some(a => a.includes(q) || q.includes(a)));
   if (match) return match;
   
-  // Word-level fuzzy: any word in query matches any word in title/aliases
-  const qWords = q.split(/\s+/);
-  match = JOBS_DATA.find(j => {
-    const titleWords = j.title.split(/\s+/);
-    const aliasWords = (j.aliases || []).flatMap(a => a.split(/\s+/));
-    const allWords = [...titleWords, ...aliasWords];
-    return qWords.some(qw => allWords.some(w => w.includes(qw) || qw.includes(w)));
-  });
-  if (match) return match;
+  // Word-level fuzzy: full words must match (min 3 chars to avoid false positives)
+  const qWords = q.split(/\s+/).filter(w => w.length >= 3);
+  if (qWords.length > 0) {
+    match = JOBS_DATA.find(j => {
+      const titleWords = j.title.split(/\s+/);
+      const aliasWords = (j.aliases || []).flatMap(a => a.split(/\s+/));
+      const allWords = [...titleWords, ...aliasWords];
+      return qWords.some(qw => allWords.some(w => w === qw || (qw.length >= 4 && w.startsWith(qw)) || (w.length >= 4 && qw.startsWith(w))));
+    });
+    if (match) return match;
+  }
   
   // Return default with custom title
   return { ...DEFAULT_JOB, title: q };
