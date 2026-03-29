@@ -90,7 +90,7 @@
     const job = findJob(query);
     
     // Title
-    $('#result-title').textContent = query.charAt(0).toUpperCase() + query.slice(1);
+    $('#result-title').textContent = query.replace(/\b\w/g, c => c.toUpperCase());
     
     // Cooked level
     const label = $('#cooked-label');
