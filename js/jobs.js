@@ -1103,7 +1103,1223 @@ const JOBS_DATA = [
       { year: 2027, event: "Your LinkedIn title changes to 'Former Prompt Engineer.' Nobody asks follow-up questions." }
     ]
   },
-  // EASTER EGG
+// HEALTHCARE
+  {
+    title: "emt",
+    aliases: ["paramedic", "emergency medical technician", "ambulance worker", "first responder"],
+    daysUntilCooked: 2500,
+    confidence: 20,
+    cookedLevel: "RAW",
+    description: "You literally drag people out of burning cars and restart hearts in the back of a moving van. AI can suggest drug dosages but it can't do CPR, carry a stretcher, or calm a screaming patient. You're safe until Boston Dynamics gets a medical license.",
+    milestones: [
+      { year: 2027, event: "AI dispatch optimizes your route. You still drive like a maniac." },
+      { year: 2029, event: "AI monitors vitals en route. You still do the actual saving." },
+      { year: 2032, event: "Robot paramedics exist in labs. Nobody trusts them near their grandma." },
+      { year: 2035, event: "Hybrid teams: you + a robot stretcher buddy. You're still in charge." }
+    ]
+  },
+  {
+    title: "physical therapist",
+    aliases: ["physiotherapist", "pt", "rehab specialist", "physical therapy"],
+    daysUntilCooked: 2200,
+    confidence: 25,
+    cookedLevel: "RAW",
+    description: "Your job is literally putting your hands on people and making them move correctly. AI can generate exercise plans all day but it can't feel that your hip is compensating or that your knee clicks weird on the third rep. Touch-based medicine is the last frontier.",
+    milestones: [
+      { year: 2027, event: "AI generates rehab protocols. Yours are still better." },
+      { year: 2029, event: "Wearable sensors track patient movement at home. You interpret the data." },
+      { year: 2032, event: "VR rehab becomes a thing. Patients still prefer your hands." },
+      { year: 2035, event: "You become a 'movement specialist' overseeing AI + human hybrid rehab." }
+    ]
+  },
+  {
+    title: "dietitian",
+    aliases: ["nutritionist", "dietary consultant", "nutrition specialist"],
+    daysUntilCooked: 900,
+    confidence: 65,
+    cookedLevel: "MEDIUM",
+    description: "ChatGPT already gives better meal plans than half of you. The only thing keeping you employed is that insurance requires a human to sign off on medical nutrition therapy. Once AI gets that credential loophole closed, you're a glorified MyFitnessPal.",
+    milestones: [
+      { year: 2026, event: "AI meal planners go mainstream. Your clients already use them." },
+      { year: 2027, event: "Continuous glucose monitors + AI replace your dietary advice." },
+      { year: 2028, event: "Insurance starts accepting AI-generated nutrition plans." },
+      { year: 2029, event: "You pivot to 'wellness coaching' which is just vibes." }
+    ]
+  },
+  {
+    title: "optometrist",
+    aliases: ["eye doctor", "vision specialist"],
+    daysUntilCooked: 1600,
+    confidence: 40,
+    cookedLevel: "WARMING UP",
+    description: "AI already reads retinal scans better than you do. But someone still needs to say 'better one or better two?' while you flip lenses. The machines can diagnose, but they can't fit glasses on someone's weird face shape. Yet.",
+    milestones: [
+      { year: 2027, event: "AI diagnoses glaucoma from a phone camera. Awkward." },
+      { year: 2029, event: "Auto-refraction machines replace most of your exam." },
+      { year: 2031, event: "Online glasses fitting with AR face scanning kills your retail side." },
+      { year: 2033, event: "You become a specialist for complex cases only. Volume plummets." }
+    ]
+  },
+  {
+    title: "psychiatrist",
+    aliases: ["mental health doctor", "shrink"],
+    daysUntilCooked: 1800,
+    confidence: 35,
+    cookedLevel: "WARMING UP",
+    description: "You prescribe SSRIs and ask 'how does that make you feel?' for $400/hour. AI therapy bots are already handling mild depression and anxiety. But you have the prescription pad, and nobody's giving that to a chatbot. Your moat is literally a DEA number.",
+    milestones: [
+      { year: 2027, event: "AI therapy apps handle 60% of mild cases. Your waitlist shortens." },
+      { year: 2029, event: "AI suggests medications with better outcomes than your intuition." },
+      { year: 2031, event: "Regulatory debate: should AI prescribe? You lobby hard against it." },
+      { year: 2033, event: "AI handles diagnosis and dosing. You sign papers and do complex cases." }
+    ]
+  },
+  {
+    title: "medical coder",
+    aliases: ["medical biller", "health information technician", "clinical coder", "medical billing specialist"],
+    daysUntilCooked: 250,
+    confidence: 92,
+    cookedLevel: "BURNT TO A CRISP",
+    description: "Your entire job is translating doctor scribbles into ICD-10 codes. This is literally what LLMs were born to do. You are a human lookup table, and AI lookup tables don't need lunch breaks, don't misread handwriting, and process claims in milliseconds.",
+    milestones: [
+      { year: 2026, event: "AI auto-codes 80% of claims. You handle the rejects." },
+      { year: 2026, event: "The reject rate drops to 5%. You handle the rejects of the rejects." },
+      { year: 2027, event: "AI handles the rejects too. You handle the phone." },
+      { year: 2027, event: "AI handles the phone. You handle your resume." }
+    ]
+  },
+  {
+    title: "surgical tech",
+    aliases: ["surgical technologist", "scrub tech", "operating room tech"],
+    daysUntilCooked: 2000,
+    confidence: 25,
+    cookedLevel: "RAW",
+    description: "You hand surgeons their tools in a sterile environment while keeping everyone alive. Robots assist in surgery but they can't anticipate what the surgeon needs next, maintain sterile field, or deal with 'oh shit' moments. You're the human glue in the OR.",
+    milestones: [
+      { year: 2028, event: "Robotic arms pass instruments. You supervise the robot." },
+      { year: 2030, event: "AI predicts which tool comes next with 90% accuracy." },
+      { year: 2033, event: "Fully robotic instrument handling in simple procedures." },
+      { year: 2036, event: "You oversee 3 ORs simultaneously. Promoted, not replaced." }
+    ]
+  },
+  {
+    title: "respiratory therapist",
+    aliases: ["rt", "respiratory care"],
+    daysUntilCooked: 1900,
+    confidence: 30,
+    cookedLevel: "WARMING UP",
+    description: "You manage ventilators and help people breathe. AI can optimize vent settings better than you, but someone needs to suction the airway, adjust the patient, and make judgment calls when things go sideways at 3am. Robots don't have bedside manner in the ICU.",
+    milestones: [
+      { year: 2027, event: "Smart ventilators auto-adjust based on AI. You monitor." },
+      { year: 2029, event: "AI protocols reduce your decision-making by 40%." },
+      { year: 2032, event: "Tele-RT becomes common. You manage patients remotely." },
+      { year: 2035, event: "Still employed. Turns out, lungs are complicated." }
+    ]
+  },
+  // TRADES
+  {
+    title: "hvac technician",
+    aliases: ["hvac tech", "hvac", "heating and cooling", "ac repair", "air conditioning technician"],
+    daysUntilCooked: 2800,
+    confidence: 15,
+    cookedLevel: "RAW",
+    description: "You crawl through attics in 130°F heat to fix air conditioning. AI can diagnose the problem from sensor data, but it can't crawl through the attic, solder a copper line, or charge refrigerant. You are unfireable until robots can sweat.",
+    milestones: [
+      { year: 2028, event: "Smart thermostats diagnose issues before you arrive. You still arrive." },
+      { year: 2031, event: "AI-guided repair tells you exactly what's wrong. You still fix it." },
+      { year: 2035, event: "Self-healing HVAC systems exist in new builds. Old buildings still need you." },
+      { year: 2040, event: "You're a 'climate systems specialist' making more money than ever." }
+    ]
+  },
+  {
+    title: "welder",
+    aliases: ["welding", "fabricator", "metal fabricator"],
+    daysUntilCooked: 2200,
+    confidence: 25,
+    cookedLevel: "RAW",
+    description: "Robotic welders dominate factory floors, but custom jobs, field repairs, and anything that isn't a straight line on a flat surface still needs human hands. Your job is safe as long as things break in inconvenient locations, which is forever.",
+    milestones: [
+      { year: 2027, event: "Cobots handle 60% of factory welding. Field work is still yours." },
+      { year: 2030, event: "AR welding helmets guide your bead. You're still holding the torch." },
+      { year: 2034, event: "Mobile welding robots exist but cost 10x what you charge." },
+      { year: 2038, event: "Custom fabrication is artisanal now. You charge more." }
+    ]
+  },
+  {
+    title: "roofer",
+    aliases: ["roofing contractor", "roofing"],
+    daysUntilCooked: 2800,
+    confidence: 10,
+    cookedLevel: "RAW",
+    description: "You climb on top of houses in the blazing sun and hammer shingles. Every part of this job requires spatial awareness, balance, physical strength, and the willingness to be 40 feet up in July. AI will replace every desk job before it replaces you.",
+    milestones: [
+      { year: 2029, event: "Drone inspections replace your roof survey. You still fix it." },
+      { year: 2033, event: "Modular roofing panels make installs faster. You still install them." },
+      { year: 2038, event: "Someone builds a roofing robot. It falls off the first house." },
+      { year: 2045, event: "Your grandkids are still roofing. AI is still inside, writing code." }
+    ]
+  },
+  {
+    title: "crane operator",
+    aliases: ["crane driver", "heavy equipment operator", "tower crane operator"],
+    daysUntilCooked: 2000,
+    confidence: 30,
+    cookedLevel: "RAW",
+    description: "You sit 200 feet in the air moving 20-ton steel beams with millimeter precision. Self-driving cranes exist in controlled environments, but construction sites are chaos. Wind, rain, hand signals from a guy named Tony — AI can't handle Tony.",
+    milestones: [
+      { year: 2028, event: "AI anti-collision systems. You still swing the load." },
+      { year: 2031, event: "Remote-operated cranes let you work from a trailer. Still a human." },
+      { year: 2035, event: "Autonomous cranes work on simple lifts. You handle the sketchy ones." },
+      { year: 2040, event: "Sites are hybrid: AI does the boring lifts, you do the impossible ones." }
+    ]
+  },
+  {
+    title: "locksmith",
+    aliases: ["lock technician", "security technician"],
+    daysUntilCooked: 1500,
+    confidence: 40,
+    cookedLevel: "WARMING UP",
+    description: "Smart locks are killing your residential business, but someone still needs to install them. And when Karen locks herself out of her smart home because the WiFi died, guess who she calls? You. The less mechanical locks exist, the more people need you when tech fails.",
+    milestones: [
+      { year: 2027, event: "Smart locks are 50% of new installs. You install smart locks now." },
+      { year: 2029, event: "Biometric entry replaces keys. You install biometric systems." },
+      { year: 2032, event: "Lock-picking is dead. System configuration is your whole job." },
+      { year: 2035, event: "You're a 'physical security integrator.' Same truck, fancier title." }
+    ]
+  },
+  {
+    title: "landscaper",
+    aliases: ["groundskeeper", "lawn care", "gardener", "landscaping"],
+    daysUntilCooked: 2500,
+    confidence: 15,
+    cookedLevel: "RAW",
+    description: "Robot mowers exist but they can only handle flat lawns. Your job involves trees, slopes, drainage, hardscaping, and dealing with HOA Karen's opinions about the mulch color. AI designs gardens; you build them with dirt under your fingernails.",
+    milestones: [
+      { year: 2028, event: "AI landscape design tools. Your clients show up with AI renderings." },
+      { year: 2031, event: "Autonomous mowers handle 30% of lawn maintenance." },
+      { year: 2035, event: "Drone planting is a thing for large properties. You still do the rest." },
+      { year: 2040, event: "You're booked out 3 months. Nobody else wants to work outside." }
+    ]
+  },
+  // FOOD & SERVICE
+  {
+    title: "sommelier",
+    aliases: ["wine expert", "wine steward", "wine specialist"],
+    daysUntilCooked: 1200,
+    confidence: 45,
+    cookedLevel: "WARMING UP",
+    description: "AI can recommend wine pairings better than you by analyzing flavor compounds and reviews from millions of drinkers. But your real value is theater — the pour, the sniff, the knowing nod. You're an actor with a corkscrew, and AI can't perform.",
+    milestones: [
+      { year: 2027, event: "Vivino's AI recommends better pairings than half of you." },
+      { year: 2029, event: "Robot wine dispensers at mid-tier restaurants." },
+      { year: 2031, event: "Fine dining doubles down on human sommeliers as a luxury experience." },
+      { year: 2034, event: "You survive. Turns out, rich people pay for vibes, not accuracy." }
+    ]
+  },
+  {
+    title: "baker",
+    aliases: ["pastry chef", "bread maker", "bakery worker"],
+    daysUntilCooked: 2000,
+    confidence: 25,
+    cookedLevel: "RAW",
+    description: "Industrial baking is already automated, but artisan bread? Sourdough starters? Custom wedding cakes? That's all feel, intuition, and hands covered in flour. AI can generate a recipe; it can't tell when the dough 'feels right.' You're safe, doughboy.",
+    milestones: [
+      { year: 2028, event: "AI-optimized recipes. Your sourdough starter still doesn't care." },
+      { year: 2031, event: "3D food printers handle simple pastries." },
+      { year: 2034, event: "Artisan baking becomes a 'heritage craft.' Prices go up." },
+      { year: 2038, event: "You teach baking classes to people escaping their AI-replaced desk jobs." }
+    ]
+  },
+  {
+    title: "butcher",
+    aliases: ["meat cutter", "meat specialist"],
+    daysUntilCooked: 2200,
+    confidence: 20,
+    cookedLevel: "RAW",
+    description: "Factory meat processing is automated, but the local butcher who dry-ages your ribeye and knows you like your brisket trimmed thin? That's artisan work. Lab-grown meat is your real threat, not AI. If anything, AI helps you optimize cuts and reduce waste.",
+    milestones: [
+      { year: 2028, event: "Lab-grown chicken hits $5/lb. You're still cheaper for the real thing." },
+      { year: 2031, event: "AI-guided cutting maximizes yield per animal." },
+      { year: 2035, event: "Artisan butchery is the new artisan coffee. Hipsters save you." },
+      { year: 2040, event: "You're a 'protein specialist.' Same knives, better title." }
+    ]
+  },
+  {
+    title: "dishwasher",
+    aliases: ["kitchen porter", "dish pit"],
+    daysUntilCooked: 1800,
+    confidence: 30,
+    cookedLevel: "WARMING UP",
+    description: "Commercial dishwashing machines already exist but someone needs to load, unload, and deal with the burnt-on cheese that no machine can handle. Your job is so undervalued that nobody's investing in replacing you. You're safe because you're cheap.",
+    milestones: [
+      { year: 2028, event: "Better commercial dishwashers. You still scrape the pans." },
+      { year: 2031, event: "Robotic dishwashing systems in large kitchens." },
+      { year: 2034, event: "Fast food goes fully automated. Fine dining still has you." },
+      { year: 2038, event: "The last human in the kitchen. Everyone else was automated first." }
+    ]
+  },
+  {
+    title: "food delivery driver",
+    aliases: ["delivery driver", "uber eats driver", "doordash driver", "grubhub driver", "food courier"],
+    daysUntilCooked: 600,
+    confidence: 75,
+    cookedLevel: "WELL DONE",
+    description: "Self-driving cars and delivery robots are gunning for you HARD. Uber, Waymo, and every robotics startup on Earth wants to eliminate your tip-dependent existence. Your only moat is apartment buildings with stairs and bad weather. For now.",
+    milestones: [
+      { year: 2026, event: "Autonomous delivery bots handle 10% of suburban orders." },
+      { year: 2027, event: "Self-driving cars do highway delivery runs between zones." },
+      { year: 2028, event: "Urban delivery robots navigate sidewalks. You get fewer pings." },
+      { year: 2029, event: "You pivot to 'last 10 feet' delivery — stairs, apartments, weird addresses." }
+    ]
+  },
+  {
+    title: "line cook",
+    aliases: ["prep cook", "short order cook", "fry cook", "kitchen worker"],
+    daysUntilCooked: 1500,
+    confidence: 40,
+    cookedLevel: "WARMING UP",
+    description: "Flippy the burger robot is real and it works at White Castle. But you handle the chaos of a full kitchen — pivoting between stations, adapting to modifications, and not losing your shit during Friday rush. Robots do one thing well; you do twenty things while being yelled at.",
+    milestones: [
+      { year: 2027, event: "Robot fryers and grills in fast food. Fine dining untouched." },
+      { year: 2029, event: "Ghost kitchens go 50% automated. Your station shrinks." },
+      { year: 2032, event: "Full robotic fast food kitchens. Casual dining still needs humans." },
+      { year: 2035, event: "You work at a nice restaurant. The robots work at McDonald's." }
+    ]
+  },
+  // OFFICE & BUSINESS
+  {
+    title: "receptionist",
+    aliases: ["front desk", "front desk agent", "office receptionist", "front desk clerk"],
+    daysUntilCooked: 400,
+    confidence: 82,
+    cookedLevel: "WELL DONE",
+    description: "AI phone systems already handle 80% of calls. Self-check-in kiosks are everywhere. Your remaining value is smiling at visitors and signing for packages, and even that's being replaced by tablet-and-badge systems. You're a very expensive greeter.",
+    milestones: [
+      { year: 2026, event: "AI virtual receptionists handle all calls and scheduling." },
+      { year: 2027, event: "Visitor management kiosks replace check-in." },
+      { year: 2027, event: "Your desk becomes a 'collaboration space.' You become a 'community manager.'" },
+      { year: 2028, event: "Remote offices don't have front desks. Neither do most offices now." }
+    ]
+  },
+  {
+    title: "executive assistant",
+    aliases: ["ea", "personal assistant", "admin assistant", "administrative assistant", "secretary"],
+    daysUntilCooked: 500,
+    confidence: 78,
+    cookedLevel: "WELL DONE",
+    description: "Scheduling, email management, travel booking, expense reports — AI handles ALL of this now. Your remaining moat is 'knowing the CEO's preferences' and 'navigating office politics.' You're a human context engine, and Claude is coming for that too.",
+    milestones: [
+      { year: 2026, event: "AI scheduling (Clockwise, Reclaim) eliminates calendar tetris." },
+      { year: 2027, event: "AI email triage handles 90% of inbox management." },
+      { year: 2028, event: "CEOs realize their AI assistant knows them better than you do." },
+      { year: 2029, event: "You're now 'Chief of Staff' doing strategy, not admin. Or you're gone." }
+    ]
+  },
+  {
+    title: "business analyst",
+    aliases: ["ba", "business intelligence analyst", "bi analyst"],
+    daysUntilCooked: 600,
+    confidence: 75,
+    cookedLevel: "WELL DONE",
+    description: "You make PowerPoints from spreadsheets and call it 'analysis.' AI does this in seconds, with better charts, more data sources, and without the passive-aggressive stakeholder meetings. Your 'requirements gathering' is just structured conversation — guess what LLMs are great at?",
+    milestones: [
+      { year: 2026, event: "AI generates reports from raw data faster than you format the header." },
+      { year: 2027, event: "Stakeholders talk directly to AI for requirements. You're the middleman being cut." },
+      { year: 2028, event: "AI writes the user stories, the acceptance criteria, AND the code." },
+      { year: 2028, event: "You're a 'Product Manager' now. Same meetings, different title." }
+    ]
+  },
+  {
+    title: "management consultant",
+    aliases: ["consultant", "strategy consultant", "mckinsey", "bcg", "bain"],
+    daysUntilCooked: 700,
+    confidence: 65,
+    cookedLevel: "WELL DONE",
+    description: "You charge $500/hour to make slides that say 'reduce costs and increase revenue.' AI generates better frameworks, analyzes more data, and doesn't expense $200 dinners. Your real product was always prestige and plausible deniability for executives. 'McKinsey said so' still carries weight. For now.",
+    milestones: [
+      { year: 2026, event: "AI strategy tools do your junior analysts' work." },
+      { year: 2027, event: "Clients realize the AI-generated deck is better than yours." },
+      { year: 2028, event: "Mid-tier consulting firms collapse. MBB survives on brand alone." },
+      { year: 2029, event: "You're a 'relationship partner.' Your juniors are all AI." }
+    ]
+  },
+  {
+    title: "actuary",
+    aliases: ["actuarial analyst", "actuarial scientist"],
+    daysUntilCooked: 500,
+    confidence: 80,
+    cookedLevel: "WELL DONE",
+    description: "You calculate risk using math. AI calculates risk using math, but faster, with more variables, and without needing to pass seven exams over ten years. Your entire profession is a math problem, and AI is very good at math problems.",
+    milestones: [
+      { year: 2026, event: "AI actuarial models outperform traditional tables." },
+      { year: 2027, event: "Insurance companies cut actuarial teams by 40%." },
+      { year: 2028, event: "Real-time risk pricing replaces your quarterly reports." },
+      { year: 2029, event: "You're a 'risk model auditor.' You check the AI's homework." }
+    ]
+  },
+  {
+    title: "bookkeeper",
+    aliases: ["bookkeeping", "accounting clerk"],
+    daysUntilCooked: 300,
+    confidence: 88,
+    cookedLevel: "WELL DONE",
+    description: "QuickBooks already automated 70% of your job. Now AI categorizes transactions, reconciles accounts, and generates financial statements without human input. You are literally a data entry person for numbers, and AI is really, really good at numbers.",
+    milestones: [
+      { year: 2026, event: "AI auto-categorizes 95% of transactions." },
+      { year: 2026, event: "Auto-reconciliation makes bank matching one-click." },
+      { year: 2027, event: "AI generates and files quarterly reports autonomously." },
+      { year: 2027, event: "Small businesses cancel their bookkeeper. The AI costs $20/month." }
+    ]
+  },
+  {
+    title: "tax preparer",
+    aliases: ["tax accountant", "tax specialist", "tax consultant", "tax advisor"],
+    daysUntilCooked: 400,
+    confidence: 82,
+    cookedLevel: "WELL DONE",
+    description: "TurboTax was already coming for you. Now AI reads W-2s, understands deductions, handles edge cases, and doesn't charge $400 for a simple 1040. Your moat is 'complex situations,' but AI is getting complex-situation-smart real fast.",
+    milestones: [
+      { year: 2026, event: "AI handles 90% of personal returns. You do the messy ones." },
+      { year: 2027, event: "AI handles small business taxes better than H&R Block." },
+      { year: 2028, event: "IRS implements auto-filing for simple returns. Half your clients gone." },
+      { year: 2029, event: "You specialize in 'tax strategy' for the wealthy. Or you're done." }
+    ]
+  },
+  // CREATIVE
+  {
+    title: "animator",
+    aliases: ["3d animator", "2d animator", "motion graphics artist", "animation artist"],
+    daysUntilCooked: 500,
+    confidence: 78,
+    cookedLevel: "WELL DONE",
+    description: "AI generates animation from text prompts now. Runway, Pika, Kling — they're churning out motion that took you weeks in hours. The gap between 'AI slop' and 'professional animation' is closing faster than your render queue. Pixar is safe. You might not be.",
+    milestones: [
+      { year: 2026, event: "AI generates 30fps animation from storyboards. It's... okay." },
+      { year: 2027, event: "AI animation is good enough for ads and social media." },
+      { year: 2028, event: "Indie studios use AI for 80% of animation. You art-direct the AI." },
+      { year: 2029, event: "Feature film quality AI animation. Disney still uses humans for prestige." }
+    ]
+  },
+  {
+    title: "voice actor",
+    aliases: ["voice over artist", "vo artist", "voice talent", "narrator", "voiceover"],
+    daysUntilCooked: 400,
+    confidence: 80,
+    cookedLevel: "WELL DONE",
+    description: "ElevenLabs cloned your voice from a 30-second sample. Every audiobook, commercial, and explainer video can now use synthetic voices that sound exactly like you but work 24/7, never need water breaks, and don't have agents demanding residuals. RIP.",
+    milestones: [
+      { year: 2026, event: "AI voices handle 60% of audiobook narration." },
+      { year: 2027, event: "Synthetic voices in commercials. Viewers can't tell." },
+      { year: 2027, event: "SAG-AFTRA fights. Loses. The clones don't unionize." },
+      { year: 2028, event: "You license your voice. The AI version of you works while you sleep." }
+    ]
+  },
+  {
+    title: "screenwriter",
+    aliases: ["script writer", "scriptwriter", "television writer", "tv writer"],
+    daysUntilCooked: 600,
+    confidence: 70,
+    cookedLevel: "WELL DONE",
+    description: "ChatGPT already writes serviceable scripts. Not Oscar-worthy, but good enough for 90% of content that's being produced. The WGA strike was about you, and the studios didn't exactly rush to protect your job. You're being 'augmented' — which is corporate for 'partially replaced.'",
+    milestones: [
+      { year: 2026, event: "AI writes first drafts. You rewrite them. Roles reversed." },
+      { year: 2027, event: "AI-written shows hit Netflix. Audiences don't notice." },
+      { year: 2028, event: "Writers' rooms shrink to 2-3 humans overseeing AI output." },
+      { year: 2029, event: "You're a 'showrunner/editor.' The AI does the writing part of 'writer.'" }
+    ]
+  },
+  {
+    title: "dj",
+    aliases: ["disc jockey", "club dj", "radio dj"],
+    daysUntilCooked: 1200,
+    confidence: 40,
+    cookedLevel: "WARMING UP",
+    description: "Spotify's algorithm is already a better DJ than most of you. But clubs don't pay for playlists — they pay for a person who reads the room, drops the beat at the right moment, and looks cool behind a laptop pretending to twist knobs. You're a vibe artist.",
+    milestones: [
+      { year: 2027, event: "AI DJs handle background music at restaurants and bars." },
+      { year: 2029, event: "AI reads crowd energy via sensors. Adjusts tempo automatically." },
+      { year: 2032, event: "Holographic DJs at mid-tier clubs. You play the real venues." },
+      { year: 2035, event: "Live DJing is a performance art. You're fine." }
+    ]
+  },
+  {
+    title: "tattoo artist",
+    aliases: ["tattooist", "tattooer", "ink artist"],
+    daysUntilCooked: 2500,
+    confidence: 12,
+    cookedLevel: "RAW",
+    description: "AI can design tattoos. AI cannot tattoo a human body. End of analysis. Your job requires artistic skill, steady hands, understanding of skin types, and the ability to work on a surface that flinches, bleeds, and asks to take a break. You're immortal.",
+    milestones: [
+      { year: 2027, event: "Clients bring AI-generated designs. You still ink them." },
+      { year: 2030, event: "Tattoo robots exist in labs. Nobody volunteers to test them." },
+      { year: 2035, event: "AI designs are everywhere. Human execution is the premium." },
+      { year: 2040, event: "You're charging more than ever. 'Hand-inked' is the new organic." }
+    ]
+  },
+  {
+    title: "fashion designer",
+    aliases: ["clothing designer", "apparel designer", "fashion"],
+    daysUntilCooked: 700,
+    confidence: 60,
+    cookedLevel: "WELL DONE",
+    description: "AI generates entire clothing collections from mood boards now. Google's Stitch creates production-ready designs from sketches. Fast fashion was already stealing your ideas at light speed — now AI steals them at the speed of a prompt. High fashion survives on name recognition. Do you have a name?",
+    milestones: [
+      { year: 2026, event: "AI generates seasonal collections. Fast fashion adopts immediately." },
+      { year: 2027, event: "Custom AI-designed clothing from body scans." },
+      { year: 2028, event: "Mid-tier fashion houses cut design teams by 50%." },
+      { year: 2029, event: "You're either a luxury brand creative director or a prompt engineer with taste." }
+    ]
+  },
+  {
+    title: "interior designer",
+    aliases: ["interior decorator", "home designer", "space designer"],
+    daysUntilCooked: 800,
+    confidence: 55,
+    cookedLevel: "MEDIUM",
+    description: "AI room design tools already let anyone upload a photo and get a redesigned space in seconds. Your taste is now a $5/month app. But high-end clients still want someone to hold their hand through fabric swatches and argue with their contractor. Luxury saves you.",
+    milestones: [
+      { year: 2026, event: "AI room redesign apps go mainstream. Your casual clients vanish." },
+      { year: 2028, event: "AR lets clients see AI designs in their actual room." },
+      { year: 2030, event: "AI specifies materials, generates plans, orders everything." },
+      { year: 2032, event: "You're a luxury consultant. AI handles everything under $50K budgets." }
+    ]
+  },
+  {
+    title: "florist",
+    aliases: ["floral designer", "flower arranger"],
+    daysUntilCooked: 1800,
+    confidence: 25,
+    cookedLevel: "WARMING UP",
+    description: "AI can design arrangements. AI cannot handle flowers — they're fragile, perishable, and every stem is different. Your job is equal parts artistic vision and physical craft. Plus, nobody wants their funeral flowers arranged by a robot. That's too dystopian even for 2026.",
+    milestones: [
+      { year: 2028, event: "AI designs arrangements. You still build them." },
+      { year: 2031, event: "Automated simple bouquets at grocery stores." },
+      { year: 2034, event: "Custom floristry becomes premium craft." },
+      { year: 2038, event: "'Handcrafted arrangements' is your selling point. Prices go up." }
+    ]
+  },
+  {
+    title: "wedding planner",
+    aliases: ["event planner", "event coordinator", "wedding coordinator"],
+    daysUntilCooked: 1000,
+    confidence: 50,
+    cookedLevel: "MEDIUM",
+    description: "AI can generate timelines, vendor lists, seating charts, and budget plans in seconds. But it can't calm a bridezilla, negotiate with a caterer in person, or fix a wardrobe malfunction 10 minutes before the ceremony. Your job is crisis management wearing heels.",
+    milestones: [
+      { year: 2027, event: "AI wedding planning apps handle 70% of logistics." },
+      { year: 2029, event: "AI coordinates vendors autonomously via messages." },
+      { year: 2031, event: "Budget weddings go fully AI-planned. Premium weddings still need you." },
+      { year: 2034, event: "You survive. Turns out, humans are emotional about weddings. Who knew." }
+    ]
+  },
+  // LEGAL
+  {
+    title: "judge",
+    aliases: ["magistrate", "justice", "court judge"],
+    daysUntilCooked: 3000,
+    confidence: 15,
+    cookedLevel: "RAW",
+    description: "AI can analyze case law better than you and predict outcomes more accurately. But 'being judged by a machine' is such a dystopian nightmare that society will resist this harder than any other AI replacement. You're protected by the Constitution and human fear of robot overlords.",
+    milestones: [
+      { year: 2028, event: "AI assists with sentencing guidelines. You still decide." },
+      { year: 2032, event: "AI handles small claims court in some jurisdictions." },
+      { year: 2038, event: "Major legal debate: should AI judge minor cases?" },
+      { year: 2045, event: "You're still a human. The 6th Amendment is your job security." }
+    ]
+  },
+  {
+    title: "paralegal",
+    aliases: ["legal assistant", "legal secretary", "legal aide"],
+    daysUntilCooked: 350,
+    confidence: 85,
+    cookedLevel: "WELL DONE",
+    description: "Document review, legal research, drafting memos — literally everything you do is text-based knowledge work. AI does it faster, cheaper, and doesn't bill for coffee breaks. Harvey AI is already in major law firms doing your job at 3am without complaining.",
+    milestones: [
+      { year: 2026, event: "AI handles 80% of document review. You do the remaining 20%." },
+      { year: 2027, event: "AI drafts motions and briefs. Lawyers edit instead of delegating to you." },
+      { year: 2027, event: "Small firms replace paralegals with AI subscriptions." },
+      { year: 2028, event: "You become a 'legal technologist.' Same work, you just manage the AI." }
+    ]
+  },
+  {
+    title: "court reporter",
+    aliases: ["stenographer", "court stenographer"],
+    daysUntilCooked: 250,
+    confidence: 90,
+    cookedLevel: "BURNT TO A CRISP",
+    description: "You type really fast on a weird keyboard. AI transcription is now more accurate than you, works in real-time, handles multiple speakers, and costs nothing. Whisper, Otter, Rev — they're all coming for your stenotype machine. Your 225 WPM is cute but irrelevant.",
+    milestones: [
+      { year: 2026, event: "AI transcription adopted in 40% of courts." },
+      { year: 2026, event: "Accuracy exceeds 99%. Your error rate suddenly matters." },
+      { year: 2027, event: "Most states allow AI-only transcription for civil cases." },
+      { year: 2028, event: "Your stenotype is in a museum next to the typewriter." }
+    ]
+  },
+  // SCIENCE
+  {
+    title: "physicist",
+    aliases: ["research physicist", "theoretical physicist", "experimental physicist"],
+    daysUntilCooked: 2000,
+    confidence: 30,
+    cookedLevel: "RAW",
+    description: "AI can solve equations and run simulations, but it can't design experiments, form hypotheses about the nature of reality, or argue about string theory at 2am. Your job is literally understanding the universe — the most complex possible task. You're safe until AI achieves actual understanding.",
+    milestones: [
+      { year: 2028, event: "AI discovers a new material by brute-forcing simulations." },
+      { year: 2031, event: "AI writes papers. Peer reviewers can't tell." },
+      { year: 2035, event: "AI proposes novel theories. Physicists debate whether they're real." },
+      { year: 2040, event: "Hybrid research: you have the intuition, AI has the compute." }
+    ]
+  },
+  {
+    title: "marine biologist",
+    aliases: ["ocean scientist", "marine scientist", "oceanographer"],
+    daysUntilCooked: 2200,
+    confidence: 20,
+    cookedLevel: "RAW",
+    description: "You study things at the bottom of the ocean. AI can analyze underwater footage and sonar data, but it can't dive, collect samples, or get stung by a jellyfish for science. Your job is wet, cold, and remote — the trifecta of AI-proof employment.",
+    milestones: [
+      { year: 2028, event: "AI identifies species from underwater cameras automatically." },
+      { year: 2031, event: "Autonomous subs collect samples. You analyze them." },
+      { year: 2035, event: "AI models ocean ecosystems. You ground-truth them." },
+      { year: 2040, event: "You and AI are co-authors on papers. Equal billing." }
+    ]
+  },
+  {
+    title: "meteorologist",
+    aliases: ["weather forecaster", "weather person", "weatherman", "weather woman"],
+    daysUntilCooked: 600,
+    confidence: 72,
+    cookedLevel: "WELL DONE",
+    description: "AI weather models (Google DeepMind, GraphCast) already predict weather better than traditional forecasting. The broadcast meteorologist survives purely because people like watching an attractive human point at a green screen. You're a weather influencer, not a scientist.",
+    milestones: [
+      { year: 2026, event: "AI forecasts are more accurate than yours 3 days out." },
+      { year: 2027, event: "AI-generated weather segments on local news." },
+      { year: 2028, event: "Half of local stations drop the weather desk." },
+      { year: 2029, event: "You're a climate communicator or a YouTube personality." }
+    ]
+  },
+  // TRANSPORT & LOGISTICS
+  {
+    title: "air traffic controller",
+    aliases: ["atc", "flight controller"],
+    daysUntilCooked: 1800,
+    confidence: 35,
+    cookedLevel: "WARMING UP",
+    description: "You prevent planes from crashing into each other using radar and extreme focus. AI can optimize routes and sequences better than you, but the FAA will take approximately 47 years to certify an AI-only tower. Regulation is your job security. You're safe because bureaucracy is slow.",
+    milestones: [
+      { year: 2028, event: "AI handles routine sequencing. You manage exceptions." },
+      { year: 2032, event: "AI towers tested at small airports. You watch nervously." },
+      { year: 2038, event: "Major airports still require humans. FAA moves slow." },
+      { year: 2045, event: "Still human-supervised. Some things are too scary to automate." }
+    ]
+  },
+  {
+    title: "ship captain",
+    aliases: ["boat captain", "vessel captain", "maritime officer", "sea captain"],
+    daysUntilCooked: 1800,
+    confidence: 30,
+    cookedLevel: "WARMING UP",
+    description: "Autonomous ships exist but they're terrifying. The ocean is unpredictable, pirates are real, and maritime law requires a human captain. Your job is 90% boredom and 10% preventing catastrophe — and that 10% keeps you employed forever.",
+    milestones: [
+      { year: 2028, event: "Autonomous cargo ships run short coastal routes." },
+      { year: 2032, event: "AI navigation handles 80% of open ocean routing." },
+      { year: 2036, event: "Remote-operated ships from onshore control centers." },
+      { year: 2040, event: "Still a captain. Maritime law moves slower than the ships." }
+    ]
+  },
+  {
+    title: "warehouse worker",
+    aliases: ["warehouse associate", "picker", "packer", "fulfillment associate", "warehouse operative"],
+    daysUntilCooked: 500,
+    confidence: 78,
+    cookedLevel: "WELL DONE",
+    description: "Amazon already has robots doing 70% of warehouse movement. Kiva robots, robotic arms, automated conveyors — you're being squeezed out shelf by shelf. The only thing keeping you is 'the last mile of picking' where items are weird shapes. AI is solving that too.",
+    milestones: [
+      { year: 2026, event: "Robots handle 80% of standard picks." },
+      { year: 2027, event: "AI-guided wearables tell you exactly where to walk." },
+      { year: 2028, event: "Fully autonomous warehouses in new facilities." },
+      { year: 2029, event: "You're a 'robot supervisor.' Fewer of you needed." }
+    ]
+  },
+  {
+    title: "postal worker",
+    aliases: ["mail carrier", "mailman", "postman", "letter carrier", "mail person"],
+    daysUntilCooked: 1200,
+    confidence: 45,
+    cookedLevel: "WARMING UP",
+    description: "Email killed 80% of your purpose. Packages are the only thing keeping you alive, and delivery robots and drones are coming for those. But 'neither rain nor snow nor autonomous delivery bot' — you still have a union, a pension, and Congress on your side.",
+    milestones: [
+      { year: 2027, event: "Drone delivery handles rural routes. Suburban still yours." },
+      { year: 2029, event: "Autonomous vans deliver in planned communities." },
+      { year: 2032, event: "Volume drops 50%. Routes consolidate." },
+      { year: 2035, event: "USPS restructures. You're a 'logistics carrier.' Same truck, fewer stops." }
+    ]
+  },
+  {
+    title: "bus driver",
+    aliases: ["transit driver", "city bus driver", "public transit operator"],
+    daysUntilCooked: 1000,
+    confidence: 55,
+    cookedLevel: "MEDIUM",
+    description: "Self-driving buses are in testing in multiple cities. Fixed routes, predictable stops, controlled environments — buses are easier to automate than cars. But you also break up fights, help wheelchair passengers, and deal with the guy who won't stop playing music. You're part driver, part bouncer.",
+    milestones: [
+      { year: 2027, event: "Autonomous shuttles on campus and airport routes." },
+      { year: 2029, event: "Self-driving buses in dedicated lanes in 5 cities." },
+      { year: 2032, event: "Most new bus routes planned for autonomous operation." },
+      { year: 2035, event: "You're a 'transit attendant.' On the bus, not driving it." }
+    ]
+  },
+  // MISC
+  {
+    title: "funeral director",
+    aliases: ["mortician", "undertaker", "embalmer", "funeral home director"],
+    daysUntilCooked: 2500,
+    confidence: 10,
+    cookedLevel: "RAW",
+    description: "Nobody wants a robot handling grandma's funeral. Your job is 50% logistics, 50% emotional support for grieving families. AI can plan the service and order the flowers, but it cannot hold someone's hand and say 'she lived a beautiful life.' You're safe because death is personal.",
+    milestones: [
+      { year: 2028, event: "AI handles paperwork, scheduling, and logistics." },
+      { year: 2031, event: "Virtual memorial services become common. You still run them." },
+      { year: 2035, event: "AI creates tribute videos from photos automatically." },
+      { year: 2040, event: "Still here. Grief doesn't have an API." }
+    ]
+  },
+  {
+    title: "private investigator",
+    aliases: ["pi", "private detective", "detective", "investigator"],
+    daysUntilCooked: 800,
+    confidence: 55,
+    cookedLevel: "MEDIUM",
+    description: "AI can search databases, cross-reference records, analyze social media, and find people faster than you. But it can't sit in a car for 8 hours eating cold pizza while watching a house, or sweet-talk a witness into talking. You're half researcher, half spy, and AI only replaces the research half.",
+    milestones: [
+      { year: 2027, event: "AI OSINT tools do in minutes what took you days." },
+      { year: 2029, event: "AI facial recognition tracks subjects across cameras." },
+      { year: 2031, event: "Digital investigation is fully automated." },
+      { year: 2034, event: "You're a 'field operative.' AI does the desk work." }
+    ]
+  },
+  {
+    title: "security guard",
+    aliases: ["security officer", "security", "guard", "bouncer", "doorman"],
+    daysUntilCooked: 1200,
+    confidence: 45,
+    cookedLevel: "WARMING UP",
+    description: "AI cameras with object detection already outperform you at surveillance. But you still need a human body to physically stop someone, check IDs, and be a visible deterrent. Your job is 95% presence and 5% action — and AI can't be present. Yet.",
+    milestones: [
+      { year: 2027, event: "AI surveillance replaces half of monitoring shifts." },
+      { year: 2029, event: "Security robots patrol parking lots. Criminals laugh at them." },
+      { year: 2032, event: "AI handles all digital security. You handle physical." },
+      { year: 2035, event: "Still employed. Turns out, a badge and a human face matter." }
+    ]
+  },
+  {
+    title: "park ranger",
+    aliases: ["forest ranger", "wildlife ranger", "conservation officer"],
+    daysUntilCooked: 2800,
+    confidence: 10,
+    cookedLevel: "RAW",
+    description: "You patrol wilderness, fight fires, rescue hikers, and educate visitors about not feeding bears. AI can monitor trail cameras and predict fire risk, but it can't carry a lost hiker out of a ravine or convince a tourist that the elk will, in fact, charge them.",
+    milestones: [
+      { year: 2028, event: "AI monitors wildlife populations via drones." },
+      { year: 2031, event: "Satellite-based fire detection is instant." },
+      { year: 2035, event: "AI chatbots answer visitor questions." },
+      { year: 2040, event: "Still a ranger. Nature doesn't run on WiFi." }
+    ]
+  },
+  {
+    title: "zookeeper",
+    aliases: ["animal keeper", "zoo attendant", "wildlife keeper"],
+    daysUntilCooked: 2500,
+    confidence: 12,
+    cookedLevel: "RAW",
+    description: "You feed lions, clean elephant enclosures, and monitor sick animals. This requires physical presence, animal behavior knowledge, and the balls to hand-feed a tiger. AI can optimize diets and predict illness from data, but it cannot shovel shit. Literally.",
+    milestones: [
+      { year: 2028, event: "AI monitors animal health via sensors and cameras." },
+      { year: 2031, event: "Automated feeding for some species." },
+      { year: 2035, event: "AI predicts breeding windows. You still do the matchmaking." },
+      { year: 2040, event: "Still a zookeeper. Animals don't respond well to robots." }
+    ]
+  },
+  {
+    title: "dog trainer",
+    aliases: ["animal trainer", "pet trainer", "dog whisperer", "canine trainer"],
+    daysUntilCooked: 2200,
+    confidence: 15,
+    cookedLevel: "RAW",
+    description: "Dogs don't have WiFi. They don't respond to chatbots. They need a human who understands body language, timing, and when to give treats vs when to give corrections. AI can generate training plans, but it cannot be present in the moment with a 80-pound German Shepherd who's decided the mailman must die.",
+    milestones: [
+      { year: 2028, event: "AI training apps give generic advice. Dogs ignore it." },
+      { year: 2031, event: "Smart collars track behavior patterns." },
+      { year: 2035, event: "AI suggests personalized training plans. You execute them." },
+      { year: 2040, event: "Still training dogs. They're still biting mailmen." }
+    ]
+  },
+  {
+    title: "yoga instructor",
+    aliases: ["yoga teacher", "fitness instructor", "pilates instructor", "group fitness instructor"],
+    daysUntilCooked: 1500,
+    confidence: 35,
+    cookedLevel: "WARMING UP",
+    description: "YouTube and Peloton already decimated your drop-in class revenue. AI-powered fitness apps adjust in real-time to your form. But yoga is really about community, the instructor's energy, and someone adjusting your downward dog so you don't herniate a disc. Namaste employed.",
+    milestones: [
+      { year: 2027, event: "AI form correction via phone camera. Pretty good." },
+      { year: 2029, event: "VR yoga classes with AI instructors. Soulless but effective." },
+      { year: 2032, event: "In-person classes become premium wellness experiences." },
+      { year: 2035, event: "You survive. People pay for presence, not poses." }
+    ]
+  },
+  {
+    title: "massage therapist",
+    aliases: ["masseuse", "bodyworker", "massage", "lmt"],
+    daysUntilCooked: 2200,
+    confidence: 15,
+    cookedLevel: "RAW",
+    description: "Massage chairs exist. They suck. Your job is literally the most human thing possible — using your hands to feel tension in another person's body and work it out. AI can't feel a knot, can't adjust pressure based on a wince, and definitely can't create the 'spa experience.' You're basically immune.",
+    milestones: [
+      { year: 2028, event: "AI-guided massage robots tried. Reviews are terrible." },
+      { year: 2031, event: "High-end massage chairs improve. Still not you." },
+      { year: 2035, event: "Robotic massage exists. People still prefer humans." },
+      { year: 2040, event: "Your rates went up. Turns out, human touch is priceless." }
+    ]
+  },
+  {
+    title: "nanny",
+    aliases: ["babysitter", "childcare worker", "au pair", "child care provider"],
+    daysUntilCooked: 2800,
+    confidence: 8,
+    cookedLevel: "RAW",
+    description: "You take care of human children. Nobody — and I mean NOBODY — is leaving their toddler with a robot. Even if the robot is technically safer, smarter, and more patient, the headline 'Robot Nanny Drops Baby' would end the entire robotics industry. You're the most AI-proof job on earth.",
+    milestones: [
+      { year: 2028, event: "AI baby monitors get smarter. You still hold the baby." },
+      { year: 2031, event: "Educational AI toys. You still handle tantrums." },
+      { year: 2035, event: "Robotic childcare discussed. Parents riot." },
+      { year: 2040, event: "Still a nanny. Humans trust humans with humans." }
+    ]
+  },
+  {
+    title: "house cleaner",
+    aliases: ["maid", "housekeeper", "janitor", "custodian", "cleaning lady", "cleaner"],
+    daysUntilCooked: 1800,
+    confidence: 25,
+    cookedLevel: "WARMING UP",
+    description: "Roombas handle floors. That's it. Your job involves toilets, windows, ovens, organizing closets, making beds, and dealing with the weird stain on the ceiling nobody wants to talk about. Every surface is different, every house is chaos, and robots can't handle chaos.",
+    milestones: [
+      { year: 2028, event: "Robot vacuums and mops handle 30% of floor cleaning." },
+      { year: 2031, event: "Window-cleaning robots for commercial buildings." },
+      { year: 2035, event: "Multi-surface cleaning robots in development." },
+      { year: 2040, event: "Still cleaning. Humans are messy in unpredictable ways." }
+    ]
+  },
+  {
+    title: "chimney sweep",
+    aliases: ["chimney cleaner"],
+    daysUntilCooked: 3000,
+    confidence: 5,
+    cookedLevel: "RAW",
+    description: "Your job is so niche, physical, and dangerous that nobody is even THINKING about automating it. You climb on roofs, stick brushes into dark holes, and remove creosote from 200-year-old flues. AI doesn't know you exist and doesn't care. You're the cockroach of the job market — unkillable.",
+    milestones: [
+      { year: 2030, event: "Drone chimney inspections. You still clean." },
+      { year: 2035, event: "A chimney-cleaning robot prototype. It gets stuck." },
+      { year: 2040, event: "Still sweeping. Still wearing the top hat." },
+      { year: 2050, event: "You outlive AI. Chimneys outlive everything." }
+    ]
+  },
+  // MORE TECH
+  {
+    title: "database administrator",
+    aliases: ["dba", "database admin", "db admin", "database engineer"],
+    daysUntilCooked: 500,
+    confidence: 78,
+    cookedLevel: "WELL DONE",
+    description: "Cloud managed databases (RDS, Aurora, Cloud SQL) already killed half your job. AI query optimization, auto-scaling, auto-patching — you're being abstracted away one AWS feature at a time. Your remaining value is 'knowing where the bodies are buried' in legacy systems.",
+    milestones: [
+      { year: 2026, event: "AI auto-tunes queries better than you." },
+      { year: 2027, event: "Self-healing databases reduce your 3am pages by 80%." },
+      { year: 2028, event: "Companies realize they haven't needed a DBA for years." },
+      { year: 2029, event: "You're a 'data platform engineer.' Same DB, fancier YAML." }
+    ]
+  },
+  {
+    title: "it support",
+    aliases: ["help desk", "tech support", "it help desk", "desktop support", "it technician", "it specialist"],
+    daysUntilCooked: 350,
+    confidence: 85,
+    cookedLevel: "WELL DONE",
+    description: "Have you tried turning it off and on again? Because AI has. AI chatbots handle 80% of IT tickets now — password resets, software installs, network troubleshooting. You're a human FAQ page, and AI FAQ pages don't sigh passive-aggressively when someone can't find the Start menu.",
+    milestones: [
+      { year: 2026, event: "AI resolves 80% of tickets without human intervention." },
+      { year: 2027, event: "AI remotely fixes most software issues. You handle hardware." },
+      { year: 2028, event: "Even hardware diagnostics go AI. You're the 'hands.'" },
+      { year: 2029, event: "IT support teams shrink by 60%. You're a specialist or gone." }
+    ]
+  },
+  {
+    title: "scrum master",
+    aliases: ["agile coach", "scrum coach", "agile master"],
+    daysUntilCooked: 200,
+    confidence: 92,
+    cookedLevel: "BURNT TO A CRISP",
+    description: "You facilitate meetings about meetings and maintain a Jira board. That's it. AI already runs standups, tracks velocity, identifies blockers, and generates sprint reports. Your certified ScrumMaster™ credential is a $1,500 piece of paper that says 'I can schedule a recurring calendar event.'",
+    milestones: [
+      { year: 2026, event: "AI runs daily standups asynchronously. Everyone cheers." },
+      { year: 2026, event: "AI auto-generates sprint reports. Your last useful task, gone." },
+      { year: 2027, event: "Teams realize they never needed you. Just Jira and Slack." },
+      { year: 2027, event: "You become a 'Product Manager.' Same meetings, actual decisions required." }
+    ]
+  },
+  {
+    title: "technical writer",
+    aliases: ["tech writer", "documentation writer", "docs writer", "api writer"],
+    daysUntilCooked: 300,
+    confidence: 88,
+    cookedLevel: "WELL DONE",
+    description: "AI writes documentation from code now. Copilot generates JSDoc, AI writes README files, and tools like Mintlify turn codebases into docs automatically. You format things that AI already understands better than your audience. You're a professional explainer being out-explained.",
+    milestones: [
+      { year: 2026, event: "AI auto-generates API docs from code. Yours look the same." },
+      { year: 2026, event: "AI writes tutorials from product specs. Pretty good ones." },
+      { year: 2027, event: "Companies drop tech writing teams. AI + engineer review." },
+      { year: 2028, event: "You're a 'content strategist' or 'developer advocate.' Writing? The AI does that." }
+    ]
+  },
+  {
+    title: "network engineer",
+    aliases: ["network admin", "network administrator", "network architect", "systems engineer"],
+    daysUntilCooked: 700,
+    confidence: 60,
+    cookedLevel: "WELL DONE",
+    description: "SD-WAN, intent-based networking, and AI-driven network management are eating your job from the cloud down. Cisco and Juniper are building the tools to replace you. But legacy infrastructure, weird edge cases, and physical cable runs keep you alive. Until the last Cat6 cable is pulled, you have a job.",
+    milestones: [
+      { year: 2027, event: "AI auto-configures 70% of network changes." },
+      { year: 2029, event: "Self-healing networks reduce troubleshooting by 80%." },
+      { year: 2031, event: "New builds are fully software-defined. No human needed." },
+      { year: 2034, event: "You maintain legacy networks. They'll exist for 30 more years." }
+    ]
+  },
+  // EDUCATION
+  {
+    title: "professor",
+    aliases: ["university professor", "college professor", "lecturer", "academic", "tenure"],
+    daysUntilCooked: 1200,
+    confidence: 45,
+    cookedLevel: "WARMING UP",
+    description: "AI tutors are more patient, more personalized, and available 24/7. But tenure is the most unbreakable contract in human civilization. You could literally be replaced by a ChatGPT wrapper and your university would still pay you because the tenure committee met in 1997. Your moat isn't skill — it's bureaucracy.",
+    milestones: [
+      { year: 2027, event: "AI tutors handle 50% of student questions. Office hours empty." },
+      { year: 2029, event: "AI teaches intro courses. You teach the advanced ones." },
+      { year: 2032, event: "Universities hire fewer new professors. Tenure protects existing ones." },
+      { year: 2035, event: "Research is your real job now. Teaching is the AI's." }
+    ]
+  },
+  {
+    title: "tutor",
+    aliases: ["private tutor", "academic tutor", "online tutor", "tutoring"],
+    daysUntilCooked: 400,
+    confidence: 82,
+    cookedLevel: "WELL DONE",
+    description: "ChatGPT is a free tutor that knows every subject, never gets frustrated, and is available at 2am when your student is panicking about their calc exam. Your $60/hour rate is competing with free. The only thing keeping you alive is parents who think AI can't motivate their kid. They're wrong.",
+    milestones: [
+      { year: 2026, event: "AI tutors handle math, science, and test prep. Your core business." },
+      { year: 2027, event: "Adaptive AI learning platforms replace standard tutoring." },
+      { year: 2028, event: "High-end test prep (SAT/MCAT) goes AI-first." },
+      { year: 2029, event: "You're a 'learning coach.' Motivation, not math." }
+    ]
+  },
+  // MORE MISC
+  {
+    title: "real estate agent",
+    aliases: ["realtor", "real estate broker", "property agent", "estate agent"],
+    daysUntilCooked: 600,
+    confidence: 70,
+    cookedLevel: "WELL DONE",
+    description: "Zillow already killed your information monopoly. AI generates listings, virtual tours, comps, and market analyses. Your 6% commission for unlocking a door and saying 'imagine your couch here' is the most overpriced service in America. DOJ lawsuits + AI = your extinction event.",
+    milestones: [
+      { year: 2026, event: "AI writes listings, generates virtual staging, handles inquiries." },
+      { year: 2027, event: "AI-powered buying platforms handle 30% of transactions." },
+      { year: 2028, event: "Commission rates collapse to 2-3%. Many agents leave." },
+      { year: 2029, event: "You're a 'transaction coordinator' or luxury-only agent." }
+    ]
+  },
+  {
+    title: "insurance agent",
+    aliases: ["insurance broker", "insurance salesman", "insurance sales"],
+    daysUntilCooked: 400,
+    confidence: 80,
+    cookedLevel: "WELL DONE",
+    description: "AI compares policies, calculates premiums, and processes claims faster than you can say 'let me check with my underwriter.' Online quote engines already decimated auto insurance agents. Now AI handles complex commercial policies too. Your rolodex isn't a moat anymore.",
+    milestones: [
+      { year: 2026, event: "AI handles 70% of personal lines without an agent." },
+      { year: 2027, event: "Commercial insurance goes AI-first for standard policies." },
+      { year: 2028, event: "Claims adjusting fully automated for common claims." },
+      { year: 2029, event: "You're a 'risk consultant' for complex cases only." }
+    ]
+  },
+  {
+    title: "pharmacist",
+    aliases: ["pharmacy", "druggist", "apothecary"],
+    daysUntilCooked: 1000,
+    confidence: 55,
+    cookedLevel: "MEDIUM",
+    description: "Pill-counting robots already exist. AI catches drug interactions better than you. Auto-dispensing machines handle 80% of fills. Your remaining value is 'counseling patients' which takes 45 seconds and consists of 'take with food.' But your license and liability protection keep you behind the counter. For now.",
+    milestones: [
+      { year: 2027, event: "AI handles all drug interaction checks. Better than you." },
+      { year: 2029, event: "Fully automated pharmacies in retail chains." },
+      { year: 2031, event: "Telepharmacy: one pharmacist oversees 10 robot pharmacies." },
+      { year: 2034, event: "You're a clinical pharmacist or redundant. No middle ground." }
+    ]
+  },
+  {
+    title: "pilot",
+    aliases: ["airline pilot", "commercial pilot", "airplane pilot", "aviator", "captain"],
+    daysUntilCooked: 2000,
+    confidence: 30,
+    cookedLevel: "RAW",
+    description: "Autopilot already flies 95% of your flight. You're there for takeoff, landing, and making passengers feel safe with your captain's voice. But 'unmanned commercial flights' is a phrase that makes everyone's palms sweat. You're protected by psychology, not technology. Nobody wants to board a plane with no pilot.",
+    milestones: [
+      { year: 2028, event: "Single-pilot operations approved for cargo flights." },
+      { year: 2032, event: "Autonomous cargo planes are routine." },
+      { year: 2036, event: "Single-pilot passenger flights tested. Public freaks out." },
+      { year: 2040, event: "Still two pilots up front. Insurance companies demand it." }
+    ]
+  },
+  {
+    title: "firefighter",
+    aliases: ["fireman", "fire fighter", "fire rescue"],
+    daysUntilCooked: 3000,
+    confidence: 8,
+    cookedLevel: "RAW",
+    description: "You run INTO burning buildings. That's literally the opposite of what any sane AI would recommend. Firefighting robots exist but they're slow, can't carry people, and melt. Your job requires superhuman courage, physical strength, and the ability to make life-or-death decisions in zero visibility. AI sends thoughts and prayers.",
+    milestones: [
+      { year: 2028, event: "Drones scout buildings before you enter." },
+      { year: 2031, event: "AI predicts fire spread patterns. You still fight the fire." },
+      { year: 2035, event: "Robot assists in hazmat situations." },
+      { year: 2040, event: "Still a firefighter. Buildings still burn. People still need saving." }
+    ]
+  },
+  {
+    title: "police officer",
+    aliases: ["cop", "law enforcement", "police", "detective", "officer"],
+    daysUntilCooked: 2500,
+    confidence: 15,
+    cookedLevel: "RAW",
+    description: "Robocop was a warning, not a roadmap. AI handles surveillance, data analysis, and predictive policing, but physical policing — chases, arrests, de-escalation, community interaction — requires a human in a uniform. The political and ethical nightmare of robot cops keeps you employed indefinitely.",
+    milestones: [
+      { year: 2027, event: "AI surveillance and license plate readers everywhere." },
+      { year: 2030, event: "AI handles most paperwork and report writing." },
+      { year: 2034, event: "Predictive policing AI guides patrol routes." },
+      { year: 2040, event: "Still a human cop. Nobody wants Robocop. Nobody." }
+    ]
+  },
+  {
+    title: "construction worker",
+    aliases: ["laborer", "construction laborer", "builder", "hard hat"],
+    daysUntilCooked: 2200,
+    confidence: 20,
+    cookedLevel: "RAW",
+    description: "Every building you enter was built by human hands. Construction robots exist in demos and fail in rain. Your job involves 47 different skills, unpredictable environments, and the ability to adapt when the architect's plans don't match reality. Which is every time.",
+    milestones: [
+      { year: 2028, event: "3D printed structures for simple buildings." },
+      { year: 2031, event: "Robotic bricklaying on flat surfaces only." },
+      { year: 2035, event: "AI project management. You still build." },
+      { year: 2040, event: "Hybrid sites: robots do repetitive tasks, you do everything else." }
+    ]
+  },
+  {
+    title: "electrician",
+    aliases: ["electrical worker", "sparky", "journeyman electrician"],
+    daysUntilCooked: 2500,
+    confidence: 12,
+    cookedLevel: "RAW",
+    description: "AI can design electrical systems. AI cannot pull wire through a wall, splice connections in a live panel, or debug why the GFCI in the bathroom keeps tripping because the previous owner was a 'DIY enthusiast.' Your hands + expertise + willingness to work with 240V = job security forever.",
+    milestones: [
+      { year: 2028, event: "AI designs optimal wiring layouts. You still wire them." },
+      { year: 2031, event: "Smart diagnostic tools pinpoint faults instantly." },
+      { year: 2035, event: "Modular electrical systems reduce install time. Still need you." },
+      { year: 2040, event: "Charging more than ever. Every EV needs a charger installed." }
+    ]
+  },
+  {
+    title: "plumber",
+    aliases: ["plumbing", "pipefitter", "pipe fitter"],
+    daysUntilCooked: 2800,
+    confidence: 10,
+    cookedLevel: "RAW",
+    description: "Water flows downhill. Shit also flows downhill. Both of these require someone who understands pipes, gravity, pressure, and the willingness to crawl under a house at 6am because the toilet exploded. No AI, no robot, no drone will ever want this job. You are unautomatable.",
+    milestones: [
+      { year: 2028, event: "AI leak detection from smart water meters." },
+      { year: 2031, event: "Self-diagnosing plumbing systems in new builds." },
+      { year: 2035, event: "Pipe inspection robots for large mains." },
+      { year: 2040, event: "Still a plumber. Still making more than most programmers." }
+    ]
+  },
+  {
+    title: "nurse",
+    aliases: ["registered nurse", "rn", "nursing", "nurse practitioner", "lpn"],
+    daysUntilCooked: 2200,
+    confidence: 18,
+    cookedLevel: "RAW",
+    description: "You monitor patients, administer medication, clean wounds, comfort families, and make life-or-death decisions — often all in the same hour. AI handles charting and dosage calculations. Robots deliver supplies. But the core of nursing is human presence during vulnerability, and there is no algorithm for compassion.",
+    milestones: [
+      { year: 2027, event: "AI charting saves you 2 hours per shift." },
+      { year: 2029, event: "AI monitors vitals and alerts before you notice changes." },
+      { year: 2032, event: "Robotic medication dispensing at bedside." },
+      { year: 2035, event: "Still critically short-staffed. AI couldn't replace you even if it wanted to." }
+    ]
+  },
+  {
+    title: "doctor",
+    aliases: ["physician", "general practitioner", "gp", "medical doctor", "md"],
+    daysUntilCooked: 1800,
+    confidence: 35,
+    cookedLevel: "WARMING UP",
+    description: "AI diagnoses better than you in studies. AI reads scans better than you. AI knows more drug interactions than you. But you have a stethoscope, a white coat, and the legal authority to prescribe. Your moat is literally a license that takes 12 years and $300K to obtain. That's bureaucratic job security.",
+    milestones: [
+      { year: 2027, event: "AI handles routine diagnosis for common conditions." },
+      { year: 2029, event: "AI triage decides who needs to see a human doctor." },
+      { year: 2032, event: "Telemedicine + AI handles 50% of primary care." },
+      { year: 2035, event: "You see complex cases only. The easy stuff is AI's now." }
+    ]
+  },
+  {
+    title: "dentist",
+    aliases: ["dental surgeon", "orthodontist", "oral surgeon"],
+    daysUntilCooked: 2000,
+    confidence: 25,
+    cookedLevel: "RAW",
+    description: "You put your hands inside people's mouths and drill holes in their teeth. AI can read X-rays and plan treatments, but it can't fill a cavity, extract a wisdom tooth, or deal with a patient who lied about flossing. Your job is physical, precise, and deeply unpleasant — the trifecta of AI-proof.",
+    milestones: [
+      { year: 2027, event: "AI reads dental X-rays. Catches cavities you missed." },
+      { year: 2029, event: "Robotic dental surgery assists with implants." },
+      { year: 2032, event: "3D-printed crowns in 10 minutes. You still install them." },
+      { year: 2035, event: "Still a dentist. Teeth still decay. Humans still need drills." }
+    ]
+  },
+  {
+    title: "social worker",
+    aliases: ["case worker", "caseworker", "social services", "child welfare worker"],
+    daysUntilCooked: 2000,
+    confidence: 20,
+    cookedLevel: "RAW",
+    description: "You navigate the most complex, messy, emotional situations humans face — abuse, addiction, poverty, mental health crises. AI can match resources to needs and generate care plans, but it can't sit with a crying mother and figure out if her kids are safe. Your judgment saves lives in ways no model can replicate.",
+    milestones: [
+      { year: 2028, event: "AI handles resource matching and referrals." },
+      { year: 2030, event: "Predictive analytics flag at-risk cases before crisis." },
+      { year: 2033, event: "AI writes case notes. You still make the calls." },
+      { year: 2036, event: "Still a social worker. Society is still broken." }
+    ]
+  },
+  {
+    title: "musician",
+    aliases: ["singer", "guitarist", "drummer", "pianist", "band member", "performer", "instrumentalist"],
+    daysUntilCooked: 1000,
+    confidence: 50,
+    cookedLevel: "MEDIUM",
+    description: "Google Lyria 3 makes radio-quality songs from a sentence. Suno and Udio generate bangers that get millions of streams before Spotify catches them. Your recorded music is increasingly worthless. But live performance — the energy, the crowd, the sweat — that's immune. Your body is your moat.",
+    milestones: [
+      { year: 2026, event: "AI music floods streaming platforms. Your royalties drop 40%." },
+      { year: 2027, event: "AI creates personalized songs for every listener." },
+      { year: 2029, event: "Studio musicians extinct. Session work is AI." },
+      { year: 2031, event: "Live performance is your only income. Ticket prices go up." }
+    ]
+  },
+  {
+    title: "photographer",
+    aliases: ["photo journalist", "portrait photographer", "wedding photographer"],
+    daysUntilCooked: 700,
+    confidence: 65,
+    cookedLevel: "WELL DONE",
+    description: "AI generates photorealistic images from text. Stock photography is dead — why pay for a photo when Midjourney makes one in 10 seconds? Your moat is real events (weddings, portraits, journalism) where you need to actually BE there. Commercial and stock? Cooked. Events? You're fine.",
+    milestones: [
+      { year: 2026, event: "AI-generated stock photos kill Getty and Shutterstock." },
+      { year: 2027, event: "AI product photography replaces 80% of commercial shoots." },
+      { year: 2029, event: "AI headshots from a selfie. Portrait studios close." },
+      { year: 2031, event: "Wedding and event photography is your whole business now." }
+    ]
+  },
+  {
+    title: "truck driver",
+    aliases: ["trucker", "long haul driver", "cdl driver", "semi driver", "lorry driver"],
+    daysUntilCooked: 800,
+    confidence: 65,
+    cookedLevel: "MEDIUM",
+    description: "Self-driving trucks are coming. Waymo, TuSimple, Aurora — they all want your highway miles. But last-mile delivery, backing into loading docks, and navigating construction zones still need human hands. You'll probably become a 'remote truck supervisor' monitoring 5 autonomous trucks from a control center.",
+    milestones: [
+      { year: 2027, event: "Autonomous trucks run highway corridors between hubs." },
+      { year: 2029, event: "Human drivers handle first/last mile only." },
+      { year: 2031, event: "Remote monitoring: one human oversees multiple trucks." },
+      { year: 2034, event: "Fully autonomous end-to-end routes in warm climates." }
+    ]
+  },
+  {
+    title: "uber driver",
+    aliases: ["lyft driver", "rideshare driver", "taxi driver", "cab driver", "taxi"],
+    daysUntilCooked: 500,
+    confidence: 78,
+    cookedLevel: "WELL DONE",
+    description: "Waymo robotaxis are already operating in San Francisco and Phoenix with no safety driver. Uber and Lyft are openly planning for autonomous fleets. You are paying car payments on a vehicle that will be your replacement. The meter is running on your career.",
+    milestones: [
+      { year: 2026, event: "Robotaxis expand to 10+ cities." },
+      { year: 2027, event: "Uber adds 'autonomous' option in major markets." },
+      { year: 2028, event: "Human rideshare becomes the premium option. Briefly." },
+      { year: 2029, event: "Human driving is a novelty. Like horse carriages in Central Park." }
+    ]
+  },
+  {
+    title: "bartender",
+    aliases: ["barista", "mixologist", "bar staff", "barman", "barmaid"],
+    daysUntilCooked: 1500,
+    confidence: 35,
+    cookedLevel: "WARMING UP",
+    description: "Robot bartenders exist in cruise ships and airports. They're novelties. Your real job isn't making drinks — it's listening to strangers' problems, knowing when to cut someone off, and making the attractive regular feel special. You're a therapist who serves alcohol. AI can't do that.",
+    milestones: [
+      { year: 2027, event: "Automated pour systems in chain restaurants." },
+      { year: 2029, event: "Robot cocktail bars as entertainment, not replacement." },
+      { year: 2032, event: "Fast-casual bars go automated. Dive bars still need you." },
+      { year: 2035, event: "You're a 'hospitality artist.' Same job, society finally respects it." }
+    ]
+  },
+  {
+    title: "waiter",
+    aliases: ["waitress", "server", "food server", "wait staff"],
+    daysUntilCooked: 1200,
+    confidence: 45,
+    cookedLevel: "WARMING UP",
+    description: "QR code menus, tablet ordering, and delivery robots are chipping away at your job from every angle. But fine dining still needs a human who can recommend the wine, read the table's mood, and know when to disappear. Fast food servers? Toast. Fine dining? You'll survive.",
+    milestones: [
+      { year: 2027, event: "Fast casual goes fully self-serve. Tips dry up." },
+      { year: 2029, event: "Delivery robots handle food running in large restaurants." },
+      { year: 2032, event: "Most chain restaurants are human-optional." },
+      { year: 2035, event: "Fine dining doubles down on human service as luxury." }
+    ]
+  },
+  {
+    title: "farmer",
+    aliases: ["rancher", "agriculture", "agricultural worker", "farm worker"],
+    daysUntilCooked: 1800,
+    confidence: 30,
+    cookedLevel: "WARMING UP",
+    description: "John Deere's autonomous tractors are already in fields. Drone crop monitoring, AI pest detection, precision irrigation — farming is being automated fast. But weather is chaotic, equipment breaks in mud, and livestock don't follow algorithms. The family farmer survives. Corporate farming gets automated.",
+    milestones: [
+      { year: 2027, event: "Autonomous tractors handle 50% of field work." },
+      { year: 2029, event: "Drone spraying and monitoring standard on large farms." },
+      { year: 2032, event: "AI manages crop rotation, soil health, and yield optimization." },
+      { year: 2035, event: "You're a 'farm operator' managing machines. Fewer farmers, more food." }
+    ]
+  },
+  {
+    title: "astronaut",
+    aliases: ["cosmonaut", "space traveler"],
+    daysUntilCooked: 3000,
+    confidence: 10,
+    cookedLevel: "RAW",
+    description: "SpaceX is sending humans to Mars and you're worried about AI? You literally go to SPACE. The whole point is humans going there. AI runs the ship's systems, but you're the payload AND the purpose. If anything, AI makes your job safer, not obsolete. You're the most future-proof job that exists.",
+    milestones: [
+      { year: 2028, event: "AI handles 95% of ISS operations. You do the spacewalks." },
+      { year: 2032, event: "Mars missions. Humans required. Obviously." },
+      { year: 2038, event: "Space stations need human maintenance." },
+      { year: 2045, event: "You explore. AI assists. This was always the plan." }
+    ]
+  },
+    // EASTER EGG
   {
     title: "ai",
     aliases: ["artificial intelligence", "machine learning", "chatbot", "llm", "large language model", "gpt", "claude", "chatgpt"],
