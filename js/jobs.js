@@ -2319,7 +2319,92 @@ const JOBS_DATA = [
       { year: 2045, event: "You explore. AI assists. This was always the plan." }
     ]
   },
-    // EASTER EGG
+    // COMMON GENERIC TERMS (catch-all for broad searches)
+  {
+    title: "director",
+    aliases: ["film director", "creative director", "art director", "managing director"],
+    daysUntilCooked: 900,
+    confidence: 55,
+    cookedLevel: "MEDIUM",
+    description: "Which kind of director? Film? Creative? Managing? Funeral? Doesn't matter — AI is coming for all of you. It directs content, manages workflows, and makes creative decisions without needing an espresso machine or a corner office. Your authority is your moat, but AI doesn't respect org charts.",
+    milestones: [
+      { year: 2027, event: "AI generates creative briefs and project plans better than your team." },
+      { year: 2028, event: "AI directs AI. You direct humans who manage AI. It's directors all the way down." },
+      { year: 2030, event: "Half of 'director' titles are eliminated as companies flatten." },
+      { year: 2032, event: "You're a 'Chief Decision Officer.' The AI does the directing." }
+    ]
+  },
+  {
+    title: "investor",
+    aliases: ["stock investor", "angel investor", "retail investor", "day trader", "venture capitalist", "vc"],
+    daysUntilCooked: 600,
+    confidence: 70,
+    cookedLevel: "WELL DONE",
+    description: "AI already beats most hedge funds. Quantitative trading dominates markets. Your 'market intuition' is confirmation bias with a brokerage account. The only investors safe from AI are the ones who write the checks AI can't write — yet. When AI gets a bank account, it's over.",
+    milestones: [
+      { year: 2026, event: "AI portfolio managers outperform 90% of active investors." },
+      { year: 2027, event: "Robo-advisors handle everything up to $10M portfolios." },
+      { year: 2029, event: "AI agents make investment decisions autonomously." },
+      { year: 2031, event: "You're either Warren Buffett-level or you're using an app like everyone else." }
+    ]
+  },
+  {
+    title: "engineer",
+    aliases: ["engineering"],
+    daysUntilCooked: 1000,
+    confidence: 50,
+    cookedLevel: "MEDIUM",
+    description: "Software engineer? Cooked. Mechanical engineer? Warming up. Civil engineer? Probably fine. 'Engineer' is so broad it's like asking if 'workers' will be replaced. The answer is: the ones who push buttons are screwed, the ones who build bridges are not. Be more specific.",
+    milestones: [
+      { year: 2026, event: "AI handles engineering calculations and simulations." },
+      { year: 2028, event: "AI designs products. You review and approve." },
+      { year: 2031, event: "Physical engineering still needs humans. Digital engineering doesn't." },
+      { year: 2035, event: "Your specialty determines your fate. Choose wisely." }
+    ]
+  },
+  {
+    title: "developer",
+    aliases: ["dev", "coder"],
+    daysUntilCooked: 547,
+    confidence: 88,
+    cookedLevel: "WELL DONE",
+    description: "You write code. AI writes code. AI writes code faster, doesn't argue about tabs vs spaces, and ships without a 2-week sprint cycle. Claude Code built an entire product in 10 days with zero human-written code. You're not being replaced — you're being outproduced 100x.",
+    milestones: [
+      { year: 2026, event: "AI writes 80% of production code. You refactor the other 20%." },
+      { year: 2027, event: "Companies realize 5 devs + AI > 50 devs without AI." },
+      { year: 2028, event: "Junior dev roles disappear. Senior devs become AI supervisors." },
+      { year: 2029, event: "'Full-stack developer' means you and your 7 AI agents." }
+    ]
+  },
+  {
+    title: "artist",
+    aliases: ["fine artist", "visual artist", "painter", "illustrator", "digital artist"],
+    daysUntilCooked: 600,
+    confidence: 72,
+    cookedLevel: "WELL DONE",
+    description: "Midjourney, DALL-E, Stable Diffusion — they generate art that wins competitions and gets sold as prints. Your years of studying anatomy and color theory? The AI learned that from your portfolio. Literally. You trained your replacement. Physical art and live performance survive. Digital art is in the blast zone.",
+    milestones: [
+      { year: 2026, event: "AI art is indistinguishable from human art to most viewers." },
+      { year: 2027, event: "Commercial illustration is 80% AI-generated." },
+      { year: 2029, event: "Physical art gains value BECAUSE it's human-made." },
+      { year: 2031, event: "You're either in galleries or doing AI-assisted commercial work." }
+    ]
+  },
+  {
+    title: "manager",
+    aliases: ["middle manager", "team lead", "team leader", "supervisor"],
+    daysUntilCooked: 600,
+    confidence: 72,
+    cookedLevel: "WELL DONE",
+    description: "You schedule meetings, write performance reviews, and forward emails up the chain. AI does all of that without needing a 'leadership offsite' to find its purpose. Middle management is the most obviously replaceable layer in any organization. Sorry, not sorry.",
+    milestones: [
+      { year: 2026, event: "AI handles scheduling, reporting, and status updates." },
+      { year: 2027, event: "AI runs 1:1s better than you. Data-driven feedback, no bias." },
+      { year: 2028, event: "Companies flatten. Two layers between IC and CEO." },
+      { year: 2029, event: "You're either an executive or an IC. Middle is gone." }
+    ]
+  },
+  // EASTER EGG
   {
     title: "ai",
     aliases: ["artificial intelligence", "machine learning", "chatbot", "llm", "large language model", "gpt", "claude", "chatgpt"],
@@ -2362,18 +2447,21 @@ function findJob(query) {
   match = JOBS_DATA.find(j => j.aliases && j.aliases.some(a => a === q));
   if (match) return match;
   
-  // Partial match on title (both sides must be 4+ chars to avoid substring noise)
-  match = JOBS_DATA.find(j => {
-    if (j.title.length < 4 || q.length < 4) return false;
-    return j.title.includes(q) || q.includes(j.title);
-  });
+  // Partial match: query contains a title OR an alias contains the query
+  // Only match if the shorter string is >60% the length of the longer one
+  // This prevents "director" matching "funeral director" but allows "software eng" matching "software engineer"
+  function similarEnough(a, b) {
+    if (a.length < 4 || b.length < 4) return false;
+    const shorter = Math.min(a.length, b.length);
+    const longer = Math.max(a.length, b.length);
+    if (shorter / longer < 0.6) return false;
+    return a.includes(b) || b.includes(a);
+  }
+  
+  match = JOBS_DATA.find(j => similarEnough(j.title, q));
   if (match) return match;
   
-  // Partial match on aliases (both sides must be 4+ chars)
-  match = JOBS_DATA.find(j => j.aliases && j.aliases.some(a => {
-    if (a.length < 4 || q.length < 4) return false;
-    return a.includes(q) || q.includes(a);
-  }));
+  match = JOBS_DATA.find(j => j.aliases && j.aliases.some(a => similarEnough(a, q)));
   if (match) return match;
   
   // Word-level fuzzy: full words must match (min 3 chars to avoid false positives)
