@@ -373,22 +373,36 @@ footer a:hover { text-decoration: underline; }
 }
 #quick-input {
   flex: 1;
-  padding: 0.7rem 1rem;
-  border: 1px solid rgba(255,255,255,0.15);
-  border-radius: 8px;
-  background: rgba(255,255,255,0.05);
-  color: #fff;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--text);
   font-size: 0.95rem;
+  font-family: inherit;
   outline: none;
   transition: border-color 0.2s;
 }
 #quick-input:focus {
-  border-color: #f97316;
+  border-color: var(--accent);
 }
 #quick-input::placeholder {
   color: rgba(255,255,255,0.35);
 }
 #quick-btn {
-  padding: 0.7rem 1.2rem;
+  padding: 0.75rem 1.5rem;
   white-space: nowrap;
+  background: var(--gradient);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
 }
+#quick-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px var(--accent-glow);
+}
+#quick-btn:active { transform: translateY(0); }
