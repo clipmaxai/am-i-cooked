@@ -20,14 +20,22 @@
   $('#job-input').addEventListener('keydown', e => {
     if (e.key === 'Enter') checkJob();
   });
-  $('#check-another').addEventListener('click', () => {
-    clearInterval(countdownInterval);
-    $('#results').classList.remove('visible');
-    $('#landing').classList.add('visible');
-    $('#job-input').value = '';
-    $('#job-input').focus();
-    history.pushState({}, '', window.location.pathname);
+  
+  // Quick search on results page
+  $('#quick-btn').addEventListener('click', quickCheck);
+  $('#quick-input').addEventListener('keydown', e => {
+    if (e.key === 'Enter') quickCheck();
   });
+  
+  function quickCheck() {
+    const val = $('#quick-input').value.trim();
+    if (!val) return;
+    $('#job-input').value = val;
+    $('#quick-input').value = '';
+    // Scroll to top smoothly
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    checkJob();
+  }
   
   // Share buttons
   $('#share-x').addEventListener('click', () => {

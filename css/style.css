@@ -355,4 +355,40 @@ footer a:hover { text-decoration: underline; }
   #check-btn { width: 100%; }
   .confidence-section { flex-direction: column; text-align: center; }
   .confidence-label { max-width: 100%; }
+  .quick-search-row { flex-direction: column; }
+  .quick-search-row button { width: 100%; }
+}
+
+/* QUICK SEARCH ON RESULTS PAGE */
+.quick-search {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.quick-search-row {
+  display: flex;
+  gap: 0.5rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+#quick-input {
+  flex: 1;
+  padding: 0.7rem 1rem;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 8px;
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+#quick-input:focus {
+  border-color: #f97316;
+}
+#quick-input::placeholder {
+  color: rgba(255,255,255,0.35);
+}
+#quick-btn {
+  padding: 0.7rem 1.2rem;
+  white-space: nowrap;
 }
