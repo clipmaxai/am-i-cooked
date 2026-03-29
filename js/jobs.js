@@ -384,7 +384,7 @@ const JOBS_DATA = [
   },
   {
     title: "surgeon",
-    aliases: ["doctor", "physician"],
+    aliases: ["surgical", "neurosurgeon", "heart surgeon", "brain surgeon", "orthopedic surgeon"],
     daysUntilCooked: 2500,
     confidence: 30,
     cookedLevel: "RAW",
@@ -498,7 +498,7 @@ const JOBS_DATA = [
   },
   {
     title: "chef",
-    aliases: ["cook", "line cook", "sous chef", "head chef", "pastry chef"],
+    aliases: ["cook", "sous chef", "head chef"],
     daysUntilCooked: 1400,
     confidence: 42,
     cookedLevel: "WARMING UP",
@@ -512,7 +512,7 @@ const JOBS_DATA = [
   },
   {
     title: "waiter",
-    aliases: ["waitress", "server", "food server", "bartender"],
+    aliases: ["waitress", "food server"],
     daysUntilCooked: 800,
     confidence: 65,
     cookedLevel: "MEDIUM",
@@ -541,7 +541,7 @@ const JOBS_DATA = [
   // EDUCATION
   {
     title: "teacher",
-    aliases: ["professor", "instructor", "educator", "lecturer", "tutor"],
+    aliases: ["instructor", "educator"],
     daysUntilCooked: 1100,
     confidence: 55,
     cookedLevel: "WARMING UP",
@@ -867,7 +867,7 @@ const JOBS_DATA = [
   },
   {
     title: "firefighter",
-    aliases: ["fire fighter", "emt", "paramedic", "first responder"],
+    aliases: ["fire fighter", "first responder"],
     daysUntilCooked: 3500,
     confidence: 10,
     cookedLevel: "RAW",
@@ -1106,7 +1106,7 @@ const JOBS_DATA = [
 // HEALTHCARE
   {
     title: "emt",
-    aliases: ["paramedic", "emergency medical technician", "ambulance worker", "first responder"],
+    aliases: ["paramedic", "emergency medical technician", "ambulance worker", "first responder", "medic"],
     daysUntilCooked: 2500,
     confidence: 20,
     cookedLevel: "RAW",
@@ -2279,7 +2279,7 @@ const JOBS_DATA = [
   },
   {
     title: "waiter",
-    aliases: ["waitress", "server", "food server", "wait staff"],
+    aliases: ["waitress", "food server", "wait staff"],
     daysUntilCooked: 1200,
     confidence: 45,
     cookedLevel: "WARMING UP",
@@ -2350,7 +2350,7 @@ const JOBS_DATA = [
   },
   {
     title: "engineer",
-    aliases: ["engineering"],
+    aliases: ["engineering", "electrical engineer", "biomedical engineer", "industrial engineer", "environmental engineer", "nuclear engineer", "materials engineer"],
     daysUntilCooked: 1000,
     confidence: 50,
     cookedLevel: "MEDIUM",
@@ -2404,7 +2404,643 @@ const JOBS_DATA = [
       { year: 2029, event: "You're either an executive or an IC. Middle is gone." }
     ]
   },
-  // EASTER EGG
+  {
+    "title": "cashier",
+    "aliases": [
+      "checkout clerk",
+      "retail cashier",
+      "store clerk",
+      "register operator"
+    ],
+    "daysUntilCooked": 350,
+    "confidence": 85,
+    "cookedLevel": "WELL DONE",
+    "description": "Self-checkout kiosks are in every grocery store. Amazon Go eliminated you entirely. Your job is literally scanning barcodes and making change — two things machines have done better than humans since the 1970s. The only reason you still exist is because old people need someone to complain to.",
+    "milestones": [
+      {
+        "year": 2026,
+        "event": "Self-checkout handles 70% of transactions. You supervise the machines."
+      },
+      {
+        "year": 2027,
+        "event": "Computer vision checkout — just grab and go."
+      },
+      {
+        "year": 2028,
+        "event": "Most retail stores are cashierless. Walmart follows Amazon."
+      },
+      {
+        "year": 2029,
+        "event": "You're a 'retail associate' doing everything except the register."
+      }
+    ]
+  },
+  {
+    "title": "editor",
+    "aliases": [
+      "copy editor",
+      "managing editor",
+      "book editor",
+      "video editor",
+      "film editor"
+    ],
+    "daysUntilCooked": 600,
+    "confidence": 68,
+    "cookedLevel": "WELL DONE",
+    "description": "Grammarly was just the appetizer. AI now edits manuscripts, restructures narratives, checks for plot holes, and adjusts tone — and doesn't charge $50/hour. Video editors? AI auto-cuts, color grades, and adds transitions. Your 'editorial eye' is now a $10/month subscription.",
+    "milestones": [
+      {
+        "year": 2026,
+        "event": "AI editing tools handle 80% of copy editing."
+      },
+      {
+        "year": 2027,
+        "event": "AI structural editing catches issues you'd miss on your third read."
+      },
+      {
+        "year": 2028,
+        "event": "Video AI does rough cuts and assembles that took you days."
+      },
+      {
+        "year": 2029,
+        "event": "You're a 'creative director' making final calls on AI output."
+      }
+    ]
+  },
+  {
+    "title": "salesperson",
+    "aliases": [
+      "sales representative",
+      "sales rep",
+      "sales associate",
+      "retail sales",
+      "salesman",
+      "saleswoman"
+    ],
+    "daysUntilCooked": 700,
+    "confidence": 60,
+    "cookedLevel": "WELL DONE",
+    "description": "AI chatbots handle product recommendations, objection handling, and closing better than most of your team — and they're available 24/7, never call in sick, and don't need a motivational pizza party. B2B enterprise sales survives on relationships. Everything else? The bot closes.",
+    "milestones": [
+      {
+        "year": 2026,
+        "event": "AI handles inbound sales and simple transactions."
+      },
+      {
+        "year": 2027,
+        "event": "AI SDRs do outbound prospecting. Better emails than your team."
+      },
+      {
+        "year": 2028,
+        "event": "Inside sales teams shrink 50%. AI closes routine deals."
+      },
+      {
+        "year": 2029,
+        "event": "Enterprise sales is the last holdout. Relationship > algorithm. For now."
+      }
+    ]
+  },
+  {
+    "title": "flight attendant",
+    "aliases": [
+      "cabin crew",
+      "steward",
+      "stewardess",
+      "air hostess"
+    ],
+    "daysUntilCooked": 1800,
+    "confidence": 25,
+    "cookedLevel": "WARMING UP",
+    "description": "Your job is equal parts safety officer, server, therapist, and bouncer at 35,000 feet. AI can suggest drink orders and robots could theoretically roll a cart, but nobody wants a robot handling an emergency evacuation or calming a panicking passenger during turbulence. You're safe because air travel is terrifying.",
+    "milestones": [
+      {
+        "year": 2028,
+        "event": "AI handles booking and customer service on ground. You're still in the sky."
+      },
+      {
+        "year": 2031,
+        "event": "Automated beverage service on short-haul flights."
+      },
+      {
+        "year": 2035,
+        "event": "Still on every flight. FAA requires human safety crew."
+      },
+      {
+        "year": 2040,
+        "event": "Robots tried. Passengers hated them. You're back."
+      }
+    ]
+  },
+  {
+    "title": "mechanical engineer",
+    "aliases": [
+      "mech eng",
+      "mechanical engineering"
+    ],
+    "daysUntilCooked": 1200,
+    "confidence": 45,
+    "cookedLevel": "WARMING UP",
+    "description": "AI designs parts, runs FEA simulations, and optimizes tolerances faster than your entire team. But someone still needs to understand materials, manufacturing constraints, and why the prototype doesn't match the simulation. Physical engineering has a reality gap that keeps you employed.",
+    "milestones": [
+      {
+        "year": 2027,
+        "event": "AI generative design creates better parts than your CAD models."
+      },
+      {
+        "year": 2029,
+        "event": "Digital twins + AI predict failures before prototyping."
+      },
+      {
+        "year": 2032,
+        "event": "AI handles routine design. You do the novel stuff."
+      },
+      {
+        "year": 2035,
+        "event": "You're an 'engineering architect.' AI does the drafting."
+      }
+    ]
+  },
+  {
+    "title": "civil engineer",
+    "aliases": [
+      "structural engineer",
+      "civil engineering"
+    ],
+    "daysUntilCooked": 1500,
+    "confidence": 35,
+    "cookedLevel": "WARMING UP",
+    "description": "AI designs bridges and buildings, but it can't inspect a cracked foundation, deal with unexpected soil conditions, or navigate the 47 government permits required to build a parking lot. Your job is 30% engineering and 70% bureaucracy, and AI can't schmooze a city inspector.",
+    "milestones": [
+      {
+        "year": 2027,
+        "event": "AI structural analysis replaces manual calculations."
+      },
+      {
+        "year": 2030,
+        "event": "BIM + AI generates construction plans automatically."
+      },
+      {
+        "year": 2033,
+        "event": "AI handles routine design. Complex sites still need you."
+      },
+      {
+        "year": 2036,
+        "event": "You oversee AI designs and handle site-specific problems."
+      }
+    ]
+  },
+  {
+    "title": "chemical engineer",
+    "aliases": [
+      "process engineer",
+      "chemical engineering"
+    ],
+    "daysUntilCooked": 1400,
+    "confidence": 38,
+    "cookedLevel": "WARMING UP",
+    "description": "AI optimizes chemical processes and runs simulations, but it can't smell that something's off in the reactor or make judgment calls when the temperature gauge reads wrong. Your job combines physics, chemistry, and the ability to not blow up a factory. That last part is important.",
+    "milestones": [
+      {
+        "year": 2028,
+        "event": "AI process optimization improves yield by 15%."
+      },
+      {
+        "year": 2031,
+        "event": "AI designs new chemical processes from scratch."
+      },
+      {
+        "year": 2034,
+        "event": "Autonomous chemical plants for simple processes."
+      },
+      {
+        "year": 2037,
+        "event": "You handle the dangerous, novel, or regulated stuff."
+      }
+    ]
+  },
+  {
+    "title": "aerospace engineer",
+    "aliases": [
+      "rocket engineer",
+      "aerospace engineering",
+      "avionics engineer"
+    ],
+    "daysUntilCooked": 1500,
+    "confidence": 35,
+    "cookedLevel": "WARMING UP",
+    "description": "SpaceX uses AI for trajectory optimization and engine testing, but someone has to design the rocket that doesn't explode. Aerospace engineering is so specialized, so high-stakes, and so regulated that AI is your copilot, not your replacement. When failure means a fireball, humans stay in the loop.",
+    "milestones": [
+      {
+        "year": 2028,
+        "event": "AI designs airframe components. You validate them."
+      },
+      {
+        "year": 2031,
+        "event": "AI runs wind tunnel simulations better than CFD teams."
+      },
+      {
+        "year": 2035,
+        "event": "AI handles routine aircraft modifications."
+      },
+      {
+        "year": 2038,
+        "event": "Still employed. Rockets are too expensive to let AI wing it."
+      }
+    ]
+  },
+  {
+    "title": "sales manager",
+    "aliases": [
+      "regional sales manager",
+      "sales director",
+      "head of sales"
+    ],
+    "daysUntilCooked": 700,
+    "confidence": 62,
+    "cookedLevel": "WELL DONE",
+    "description": "You manage a sales team, set quotas, and give motivational speeches. AI now forecasts revenue better than you, assigns leads optimally, and coaches reps with data-driven feedback. Your 'gut instinct about the pipeline' is losing to algorithms. You survive by being a leader, not a forecaster.",
+    "milestones": [
+      {
+        "year": 2026,
+        "event": "AI forecasting makes your spreadsheets obsolete."
+      },
+      {
+        "year": 2027,
+        "event": "AI coaches reps in real-time during calls."
+      },
+      {
+        "year": 2028,
+        "event": "AI SDRs handle outbound. Your team shrinks."
+      },
+      {
+        "year": 2029,
+        "event": "You manage fewer humans and more AI agents."
+      }
+    ]
+  },
+  {
+    "title": "operations manager",
+    "aliases": [
+      "ops manager",
+      "operations director",
+      "head of operations"
+    ],
+    "daysUntilCooked": 650,
+    "confidence": 65,
+    "cookedLevel": "WELL DONE",
+    "description": "You optimize processes, manage supply chains, and put out fires. AI does all of this faster — supply chain optimization, demand forecasting, workflow automation. Your value is in the messy human stuff: negotiating with vendors, managing crises, and herding cats across departments.",
+    "milestones": [
+      {
+        "year": 2026,
+        "event": "AI handles supply chain optimization and inventory."
+      },
+      {
+        "year": 2027,
+        "event": "Process automation eliminates 40% of operational tasks."
+      },
+      {
+        "year": 2028,
+        "event": "AI runs the dashboards. You run the people."
+      },
+      {
+        "year": 2029,
+        "event": "Ops team is you + AI. That's the whole team."
+      }
+    ]
+  },
+  {
+    "title": "loan officer",
+    "aliases": [
+      "mortgage officer",
+      "lending officer",
+      "loan originator"
+    ],
+    "daysUntilCooked": 400,
+    "confidence": 80,
+    "cookedLevel": "WELL DONE",
+    "description": "AI underwrites loans in seconds by analyzing credit data, income verification, and risk factors that you'd need a week to review. Rocket Mortgage already automated most of what you do. Your remaining value is hand-holding nervous first-time buyers through paperwork.",
+    "milestones": [
+      {
+        "year": 2026,
+        "event": "AI instant-approves 60% of applications."
+      },
+      {
+        "year": 2027,
+        "event": "AI handles the entire application process end-to-end."
+      },
+      {
+        "year": 2028,
+        "event": "Human loan officers only for complex or edge cases."
+      },
+      {
+        "year": 2029,
+        "event": "You're a 'financial advisor' now. The loans approve themselves."
+      }
+    ]
+  },
+  {
+    "title": "coach",
+    "aliases": [
+      "life coach",
+      "executive coach",
+      "business coach",
+      "career coach"
+    ],
+    "daysUntilCooked": 1000,
+    "confidence": 45,
+    "cookedLevel": "WARMING UP",
+    "description": "AI coaching bots are getting good — BetterUp already uses AI for 50% of coaching interactions. But people pay you for accountability, empathy, and someone who gives a damn about their goals. AI can ask the right questions. It can't give you the disappointed look when you skip the gym for the third week.",
+    "milestones": [
+      {
+        "year": 2027,
+        "event": "AI coaching apps handle goal-setting and tracking."
+      },
+      {
+        "year": 2029,
+        "event": "AI coaches have conversations indistinguishable from humans."
+      },
+      {
+        "year": 2031,
+        "event": "Premium coaching goes up in price. Budget coaching is AI."
+      },
+      {
+        "year": 2034,
+        "event": "You survive as a luxury service. Like a human therapist with a clipboard."
+      }
+    ]
+  },
+  {
+    "title": "biologist",
+    "aliases": [
+      "research biologist",
+      "wildlife biologist",
+      "microbiologist",
+      "cell biologist"
+    ],
+    "daysUntilCooked": 1500,
+    "confidence": 35,
+    "cookedLevel": "WARMING UP",
+    "description": "AlphaFold solved protein folding. AI analyzes genomes, identifies species from DNA, and designs experiments. But biology is messy — literally. You still need humans to collect samples, run experiments in wet labs, and figure out why the cell culture died again. Nature doesn't have an API.",
+    "milestones": [
+      {
+        "year": 2028,
+        "event": "AI designs experiments. You run them and clean the petri dishes."
+      },
+      {
+        "year": 2031,
+        "event": "AI discovers new species from environmental DNA."
+      },
+      {
+        "year": 2034,
+        "event": "Lab robots handle routine experiments."
+      },
+      {
+        "year": 2037,
+        "event": "You're a 'research director' overseeing AI + robot labs."
+      }
+    ]
+  },
+  {
+    "title": "writer",
+    "aliases": [
+      "author",
+      "freelance writer",
+      "creative writer",
+      "novelist",
+      "fiction writer"
+    ],
+    "daysUntilCooked": 600,
+    "confidence": 70,
+    "cookedLevel": "WELL DONE",
+    "description": "ChatGPT writes blog posts, articles, ad copy, and even novels. It doesn't have writer's block, doesn't miss deadlines, and doesn't need 'inspiration.' The content mills are already AI. Literary fiction survives because it requires actual human experience. But most writing jobs aren't literary fiction — they're content.",
+    "milestones": [
+      {
+        "year": 2026,
+        "event": "AI writes 70% of online content. Nobody notices."
+      },
+      {
+        "year": 2027,
+        "event": "AI ghostwrites bestselling books. Ghostwriters are ghosts."
+      },
+      {
+        "year": 2028,
+        "event": "Only distinctive voices survive. Generic writing is commodity."
+      },
+      {
+        "year": 2029,
+        "event": "You're either Stephen King or you're competing with free."
+      }
+    ]
+  },
+  {
+    "title": "driver",
+    "aliases": [
+      "chauffeur",
+      "personal driver",
+      "professional driver"
+    ],
+    "daysUntilCooked": 700,
+    "confidence": 65,
+    "cookedLevel": "WELL DONE",
+    "description": "Self-driving cars are already on roads in multiple cities. Whether you drive a taxi, truck, or limo, the trajectory is the same: autonomous vehicles will handle the easy routes first, then the hard ones. Your steering wheel has an expiration date.",
+    "milestones": [
+      {
+        "year": 2027,
+        "event": "Autonomous vehicles handle 20% of commercial driving."
+      },
+      {
+        "year": 2029,
+        "event": "Human drivers needed only for complex routes and conditions."
+      },
+      {
+        "year": 2031,
+        "event": "Most highway driving is autonomous."
+      },
+      {
+        "year": 2034,
+        "event": "Driving is a specialty skill, not a default job."
+      }
+    ]
+  },
+  {
+    "title": "designer",
+    "aliases": [
+      "product designer",
+      "industrial designer"
+    ],
+    "daysUntilCooked": 700,
+    "confidence": 60,
+    "cookedLevel": "WELL DONE",
+    "description": "AI generates designs from text. Entire websites from a napkin sketch. Product mockups in seconds. Which kind of designer are you? Doesn't matter — AI is coming for visual, UX, industrial, interior, all of it. Your taste is your moat. AI has taste now too.",
+    "milestones": [
+      {
+        "year": 2026,
+        "event": "AI generates production-ready designs from prompts."
+      },
+      {
+        "year": 2027,
+        "event": "Clients compare your work to AI output. AI is cheaper."
+      },
+      {
+        "year": 2028,
+        "event": "Design teams shrink 50%. One human + AI replaces five humans."
+      },
+      {
+        "year": 2029,
+        "event": "You're a 'design director' curating AI output. Not a bad gig."
+      }
+    ]
+  },
+  {
+    "title": "scientist",
+    "aliases": [
+      "research scientist",
+      "laboratory scientist",
+      "lab scientist"
+    ],
+    "daysUntilCooked": 1500,
+    "confidence": 35,
+    "cookedLevel": "WARMING UP",
+    "description": "AI discovers drugs, predicts protein structures, and runs more experiments than your entire lab. But science requires creativity, skepticism, and the ability to ask questions nobody thought to ask. AI optimizes known spaces. You explore unknown ones. That's the difference.",
+    "milestones": [
+      {
+        "year": 2028,
+        "event": "AI runs 500 experiments overnight. You interpret results."
+      },
+      {
+        "year": 2031,
+        "event": "AI proposes hypotheses. You judge which ones aren't insane."
+      },
+      {
+        "year": 2035,
+        "event": "AI-driven labs are standard. You design the research agenda."
+      },
+      {
+        "year": 2038,
+        "event": "Science is a human-AI partnership. Neither works alone."
+      }
+    ]
+  },
+  {
+    "title": "makeup artist",
+    "aliases": [
+      "mua",
+      "beauty artist",
+      "cosmetics artist"
+    ],
+    "daysUntilCooked": 1800,
+    "confidence": 20,
+    "cookedLevel": "RAW",
+    "description": "You literally apply products to human faces. AI can suggest looks, generate virtual try-ons, and recommend products — but it can't blend foundation on actual skin. Your hands touch faces. That's not automatable. Bridal, editorial, film — all safe. You're an artist with a brush, not a prompt.",
+    "milestones": [
+      {
+        "year": 2027,
+        "event": "AR beauty filters reduce casual makeup demand."
+      },
+      {
+        "year": 2029,
+        "event": "AI-powered try-on kills some retail consultation."
+      },
+      {
+        "year": 2032,
+        "event": "Professional MUAs are the premium tier. AI handles the tutorials."
+      },
+      {
+        "year": 2035,
+        "event": "Still painting faces. Skin doesn't have an undo button."
+      }
+    ]
+  },
+  {
+    "title": "investment banker",
+    "aliases": [
+      "ibanker",
+      "ib analyst",
+      "banking analyst"
+    ],
+    "daysUntilCooked": 500,
+    "confidence": 75,
+    "cookedLevel": "WELL DONE",
+    "description": "You build financial models in Excel at 2am for $200K/year. AI builds better models in seconds. Your pitch decks? AI generates those. Due diligence? AI reads 10,000 pages while you read 10. Your remaining value is client relationships and the Goldman Sachs brand on your business card.",
+    "milestones": [
+      {
+        "year": 2026,
+        "event": "AI generates financial models and pitch decks."
+      },
+      {
+        "year": 2027,
+        "event": "AI due diligence is faster and more thorough than your analyst pool."
+      },
+      {
+        "year": 2028,
+        "event": "Junior banker headcount drops 50%. Seniors keep their jobs and bonuses."
+      },
+      {
+        "year": 2029,
+        "event": "You're a 'relationship banker.' The analysis is the AI's job."
+      }
+    ]
+  },
+  {
+    "title": "quality inspector",
+    "aliases": [
+      "quality control inspector",
+      "qc inspector",
+      "quality assurance inspector"
+    ],
+    "daysUntilCooked": 500,
+    "confidence": 75,
+    "cookedLevel": "WELL DONE",
+    "description": "Computer vision inspects parts faster, more consistently, and without eye strain. AI detects defects invisible to the human eye. Your clipboard and magnifying glass are relics. Manufacturing QC is one of the easiest automation wins — consistent, repetitive, visual. That's AI's sweet spot.",
+    "milestones": [
+      {
+        "year": 2026,
+        "event": "AI visual inspection handles 80% of manufacturing QC."
+      },
+      {
+        "year": 2027,
+        "event": "AI catches micro-defects humans miss consistently."
+      },
+      {
+        "year": 2028,
+        "event": "QC teams shrink to supervisory roles."
+      },
+      {
+        "year": 2029,
+        "event": "You audit the AI systems. Which is fewer jobs."
+      }
+    ]
+  },
+  {
+    "title": "dental hygienist",
+    "aliases": [
+      "hygienist",
+      "teeth cleaner"
+    ],
+    "daysUntilCooked": 1800,
+    "confidence": 25,
+    "cookedLevel": "WARMING UP",
+    "description": "You scrape calculus off teeth with sharp metal tools inside people's mouths. This requires physical dexterity, patient interaction, and the ability to make small talk while someone drools on you. No robot wants this job. No robot CAN do this job. The fluoride is strong with this one.",
+    "milestones": [
+      {
+        "year": 2028,
+        "event": "AI identifies issues during cleaning via camera. You still clean."
+      },
+      {
+        "year": 2031,
+        "event": "Ultrasonic tech improves. You're more efficient, not replaced."
+      },
+      {
+        "year": 2034,
+        "event": "Robot teeth cleaning attempted. Reviews are... bloody."
+      },
+      {
+        "year": 2038,
+        "event": "Still cleaning teeth. Plaque is forever."
+      }
+    ]
+  },
+    // EASTER EGG
   {
     title: "ai",
     aliases: ["artificial intelligence", "machine learning", "chatbot", "llm", "large language model", "gpt", "claude", "chatgpt"],
@@ -2464,16 +3100,24 @@ function findJob(query) {
   match = JOBS_DATA.find(j => j.aliases && j.aliases.some(a => similarEnough(a, q)));
   if (match) return match;
   
-  // Word-level fuzzy: full words must match (min 3 chars to avoid false positives)
+  // Word-level fuzzy: only for MULTI-WORD queries
+  // Scores by number of matching words from TITLE only (not alias fragments)
   const qWords = q.split(/\s+/).filter(w => w.length >= 3);
-  if (qWords.length > 0) {
-    match = JOBS_DATA.find(j => {
-      const titleWords = j.title.split(/\s+/);
-      const aliasWords = (j.aliases || []).flatMap(a => a.split(/\s+/));
-      const allWords = [...titleWords, ...aliasWords];
-      return qWords.some(qw => allWords.some(w => w === qw || (qw.length >= 4 && w.startsWith(qw)) || (w.length >= 4 && qw.startsWith(w))));
+  const stopWords = new Set(['the','a','an','and','or','of','in','on','at','to','for','is','as','by','with']);
+  if (qWords.length > 1) {
+    const meaningfulQWords = qWords.filter(w => !stopWords.has(w));
+    let bestMatch = null, bestScore = 0;
+    JOBS_DATA.forEach(j => {
+      const titleWords = j.title.split(/\s+/).filter(w => !stopWords.has(w));
+      const matchCount = meaningfulQWords.filter(qw => titleWords.some(w => {
+        return w === qw || (qw.length >= 5 && w.startsWith(qw)) || (w.length >= 5 && qw.startsWith(w));
+      })).length;
+      if (matchCount > bestScore) {
+        bestScore = matchCount;
+        bestMatch = j;
+      }
     });
-    if (match) return match;
+    if (bestMatch && bestScore > 0) return bestMatch;
   }
   
   // Return default with custom title
