@@ -392,17 +392,18 @@ footer a:hover { text-decoration: underline; }
 #quick-btn {
   padding: 0.75rem 1.5rem;
   white-space: nowrap;
-  background: var(--gradient);
+  background: linear-gradient(135deg, #f97316, #ef4444);
   color: #fff;
   border: none;
   border-radius: 10px;
   font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
+  font-family: inherit;
   transition: transform 0.15s, box-shadow 0.15s;
 }
 #quick-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px var(--accent-glow);
+  box-shadow: 0 8px 30px rgba(249,115,22,0.3);
 }
 #quick-btn:active { transform: translateY(0); }
