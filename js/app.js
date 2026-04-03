@@ -21,6 +21,8 @@
     const job = params.get('job');
     if (job) {
       $('#job-input').value = job.replace(/-/g, ' ');
+      $('#landing').classList.remove('visible');
+      $('#calculating').classList.remove('visible');
       showResults(job.replace(/-/g, ' '));
     } else {
       // Back to landing
