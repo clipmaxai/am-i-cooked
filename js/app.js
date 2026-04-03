@@ -120,6 +120,10 @@
   function showResults(query) {
     const job = findJob(query);
     
+    // Ensure only results section is visible
+    $('#landing').classList.remove('visible');
+    $('#calculating').classList.remove('visible');
+    
     // Title
     $('#result-title').textContent = query.replace(/\b\w/g, c => c.toUpperCase());
     
