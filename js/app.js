@@ -66,6 +66,11 @@
     // Update URL
     const slug = input.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
     history.pushState({}, '', `?job=${slug}`);
+
+    // Track search in GA4
+    if (typeof gtag === 'function') {
+      gtag('event', 'search', { search_term: input.toLowerCase() });
+    }
     
     // Show calculating screen
     $('#landing').classList.remove('visible');
