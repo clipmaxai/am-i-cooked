@@ -14,6 +14,22 @@
       checkJob();
     }
   });
+
+  // Handle back/forward button
+  window.addEventListener('popstate', () => {
+    const params = new URLSearchParams(window.location.search);
+    const job = params.get('job');
+    if (job) {
+      $('#job-input').value = job.replace(/-/g, ' ');
+      showResults(job.replace(/-/g, ' '));
+    } else {
+      // Back to landing
+      $('#results').classList.remove('visible');
+      $('#calculating').classList.remove('visible');
+      $('#landing').classList.add('visible');
+      $('#job-input').value = '';
+    }
+  });
   
   // Event listeners
   $('#check-btn').addEventListener('click', checkJob);
