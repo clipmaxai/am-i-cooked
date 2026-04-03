@@ -55,6 +55,13 @@ body {
   margin-bottom: 16px;
 }
 
+.hero-emoji {
+  -webkit-text-fill-color: initial;
+  background: none;
+  -webkit-background-clip: initial;
+  background-clip: initial;
+}
+
 .hero-subtitle {
   font-size: clamp(1.1rem, 3vw, 1.5rem);
   color: var(--text-dim);
